@@ -184,8 +184,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 853898748}
-  - component: {fileID: 853898749}
   - component: {fileID: 853898751}
+  - component: {fileID: 853898749}
   - component: {fileID: 853898750}
   - component: {fileID: 853898752}
   m_Layer: 0
@@ -299,8 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loopClip: {fileID: 0}
-  speed: 0
-  animator: {fileID: 0}
+  animator: {fileID: 853898752}
 --- !u!95 &853898752
 Animator:
   serializedVersion: 3
