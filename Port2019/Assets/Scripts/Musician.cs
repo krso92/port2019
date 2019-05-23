@@ -18,6 +18,11 @@ public class Musician : MonoBehaviour
     public CreatureType Creature { get => creature; }
     public bool IsPlaying { get => isPlaying; }
 
+    public float CurrentPlayTime
+    {
+        get => audioSource.time;
+    }
+
     // For more dynamic animations maybe??
     // ignore if not needed
     private float speed;
@@ -26,6 +31,8 @@ public class Musician : MonoBehaviour
     [Header("component references")]
     [SerializeField]
     private Animator animator;
+    [SerializeField]
+    private AudioSource audioSource;
 
     // internal logic
 

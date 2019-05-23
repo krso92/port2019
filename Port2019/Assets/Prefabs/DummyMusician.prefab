@@ -51,6 +51,7 @@ MonoBehaviour:
   band: 0
   creature: 0
   animator: {fileID: 492569421581519703}
+  audioSource: {fileID: 492569421581519702}
 --- !u!212 &492569421581519018
 SpriteRenderer:
   m_ObjectHideFlags: 0
