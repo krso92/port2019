@@ -6,7 +6,18 @@ public class Musician : MonoBehaviour
 {
     [SerializeField]
     private AudioClip loopClip;
-    
+    [SerializeField]
+    private BandType band;
+    [SerializeField]
+    private CreatureType creature;
+
+    // getters
+
+    public AudioClip LoopClip { get => loopClip; }
+    public BandType Band { get => band; }
+    public CreatureType Creature { get => creature; }
+    public bool IsPlaying { get => isPlaying; }
+
     // For more dynamic animations maybe??
     // ignore if not needed
     private float speed;
@@ -19,6 +30,7 @@ public class Musician : MonoBehaviour
     // internal logic
 
     private bool isPlaying;
+
 
     // unity messages
 
@@ -44,10 +56,16 @@ public class Musician : MonoBehaviour
 
         UpdateAnimator();
 
-        GameManager.Instance.TriggerMusicianStartPlayingEvent(this);
+        if (isPlaying)
+        {
+            GameManager.Instance.StartPlaying(this);
+        }
+        else
+        {
+            GameManager.Instance.StopPlaying(this);
+        }
     }
-
-
+    
     protected virtual void UpdateAnimator()
     {
         if (isPlaying)
