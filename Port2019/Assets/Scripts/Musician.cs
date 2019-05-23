@@ -23,6 +23,19 @@ public class Musician : MonoBehaviour
         get => audioSource.time;
     }
 
+    public static Musician GetPlayingMusician()
+    {
+        Musician[] musicians = GameObject.Find("Musicians").GetComponentsInChildren<Musician>();
+        foreach (var m in musicians)
+        {
+            if (m.IsPlaying)
+            {
+                return m;
+            }
+        }
+        return null;
+    }
+
     // For more dynamic animations maybe??
     // ignore if not needed
     private float speed;
