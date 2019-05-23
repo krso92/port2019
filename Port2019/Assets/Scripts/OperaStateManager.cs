@@ -57,12 +57,12 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         {
             yield return new WaitForSeconds(5f);
             int[] a = CheckSatisfactionLevel();
-            /*
-            Debug.Log("//////////////////////////////////");
+            
+            Debug.Log("/////////////Satisfaction/////////////");
             Debug.Log(a[0]);
             Debug.Log(a[1]);
-            Debug.Log("//////////////////////////////////");
-            */
+            Debug.Log("//////////////////////////////////////");
+            
             // TODO -- update date mood on UI
         }
     }
