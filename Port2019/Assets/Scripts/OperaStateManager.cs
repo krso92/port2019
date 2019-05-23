@@ -12,11 +12,33 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         2 - ?? Count points ??
     */
 
+    public const float TIME_FOR_OPERA = 60 * 2;
+
     // state holders
     // koliko cega i kako to posle lako proveriti?
     private int count;
     private HashSet<CreatureType> creatures;
     private List<BandType> bandMembers;
+
+    private int[] scoreSum;
+
+    public int[] Score
+    {
+        get => scoreSum;
+    }
+
+    public void ResetScore()
+    {
+        scoreSum = new int[3];
+    }
+
+    private void UpdateScore(int[] score)
+    {
+        for (int i = 0; i < scoreSum.Length; i++)
+        {
+            scoreSum[i] += score[i];
+        }
+    }
 
     private void Start()
     {
@@ -24,6 +46,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         bandMembers = new List<BandType>();
         GameManager.Instance.OnMusicianStartPlaying += AddMusician;
         GameManager.Instance.OnMusicianStopPlaying += RemoveMusician;
+        ResetScore();
         StartCoroutine(CheckDateMood());
     }
 
@@ -53,18 +76,23 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     private IEnumerator CheckDateMood()
     {
         yield return null;
-        while (enabled)
+        float then = Time.time;
+
+        while (then + TIME_FOR_OPERA > Time.time)
         {
             yield return new WaitForSeconds(5f);
-            int[] a = CheckSatisfactionLevel();
+
+            int[] scoreNow = CheckSatisfactionLevel();
             
             Debug.Log("/////////////Satisfaction/////////////");
-            Debug.Log(a[0]);
-            Debug.Log(a[1]);
+            Debug.Log(scoreNow[0]);
+            Debug.Log(scoreNow[1]);
             Debug.Log("//////////////////////////////////////");
-            
-            // TODO -- update date mood on UI
+
+            UpdateScore(scoreNow);
+            // TODO -- update date mood on UI, determine MAX and place it on range scroll
         }
+        Debug.Log("Done, score is [" + scoreSum[0] + ", " + scoreSum[1] + "]");
     }
 
     private int[] CheckSatisfactionLevel()
