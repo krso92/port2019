@@ -33,4 +33,12 @@ public class DateManager : TGlobalSingleton<DateManager>
     {
         return Holder.GetByIndex(index);
     }
+
+    public int DatesCount
+    {
+        get
+        {
+            return Holder.Count;
+        }
+    }
 }
