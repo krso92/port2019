@@ -5,12 +5,19 @@ using UnityEngine.UI;
 using Lean.Touch;
 using System;
 using DG.Tweening;
+using TMPro;
 
 public class TinderTouch : MonoBehaviour
 {
     private int countChar = 0;
     public List<Sprite> Characters = new List<Sprite>();
     private Sprite currChar;
+
+    public TextMeshProUGUI textInfo;
+
+    public Vector3 startPosition;
+    public Vector3 resetPosition;
+    private bool inputEnabled = false;
 
     public RectTransform YesPanel;
     public RectTransform NoPanel;
@@ -49,6 +56,7 @@ public class TinderTouch : MonoBehaviour
 
         XMaxMove = Screen.width / screenDivider;
         ClosePanels();
+        SetNextLook();
     }
 
     private void OnFingerUp(LeanFinger obj)
@@ -78,42 +86,48 @@ public class TinderTouch : MonoBehaviour
 
     private void OnFingerSwipe()
     {
-        float x = currPos.x / XMaxMove;
-        tempX = 0f;
-        float rotateTemp = 0f;
-        //float rotateTem = 0f;
-        float currX = currPos.x;
-        if (currX > XMaxMove)
+        if (inputEnabled)
         {
-            x = XMaxMove;
-            ShowMatch();
-        }
-        else if (currX < -XMaxMove)
-        {
+            float x = currPos.x / XMaxMove;
+            tempX = 0f;
+            float rotateTemp = 0f;
+            //float rotateTem = 0f;
+            float currX = currPos.x;
+            if (currX > XMaxMove)
+            {
+                x = XMaxMove;
+                ShowMatch();
+            }
+            else if (currX < -XMaxMove)
+            {
 
-            x = -XMaxMove;
-            ShowNext();
+                x = -XMaxMove;
+                ShowNext();
+            }
+            else
+            {
+                x = currX;
+                ClosePanels();
+            }
+            if (fingerCount == 0)
+            {
+                print("It clears!");
+                x = 0;
+            }
+            rotateTemp = x / XMaxMove;
+            rotateTemp *= ZMaxRotate;
+            //rotateTem = Mathf.Lerp(rotateTem, rotateTemp, strafeSpeed);
+            DOTween.Kill(mainImage);
+            //tempTime = Mathf.Abs(mainImage.eulerAngles.z - rotateTemp);
+            mainImage.DORotate(new Vector3(0f, 0f, rotateTemp), speedTween);
+            //mainImage.DOMoveX(x, speedTween);
+            //tempX = Mathf.Lerp(tempX, x, Time.deltaTime * strafeSpeed);
+            //mainImage.transform.eulerAngles = new Vector3(0f, 0f, rotateTem);
         }
-        else
-        {
-            x = currX;
-            ClosePanels();
-        }
-        if (fingerCount == 0)
-        {
-            print("It clears!");
-            x = 0;
-        }
-        rotateTemp = x / XMaxMove;
-        rotateTemp *= ZMaxRotate;
-        //rotateTem = Mathf.Lerp(rotateTem, rotateTemp, strafeSpeed);
-        DOTween.Kill(mainImage);
-        //tempTime = Mathf.Abs(mainImage.eulerAngles.z - rotateTemp);
-        mainImage.DORotate(new Vector3(0f, 0f, rotateTemp),speedTween);
-        //mainImage.DOMoveX(x, speedTween);
-        //tempX = Mathf.Lerp(tempX, x, Time.deltaTime * strafeSpeed);
-        //mainImage.transform.eulerAngles = new Vector3(0f, 0f, rotateTem);
     }
+
+
+
 
     private void ShowMatch()
     {
@@ -140,7 +154,7 @@ public class TinderTouch : MonoBehaviour
         }
         else if (currX < -XMaxMove)
         {
-            print("Its next");
+            SetNextLook();
         }
         else
         {
@@ -150,11 +164,21 @@ public class TinderTouch : MonoBehaviour
 
     private void SetNextLook()
     {
+        inputEnabled = false;
+        textInfo.gameObject.SetActive(true);
         currChar = Characters[countChar];
         if (countChar + 1 < Characters.Count)
         {
             countChar++;
         }
+        mainImage.localPosition = resetPosition;
+        mainImage.DOLocalMove(startPosition, 0.8f).SetEase(Ease.OutCubic).OnComplete(OnSetupComplete);
+    }
+
+    private void OnSetupComplete()
+    {
+        inputEnabled = true;
+        textInfo.gameObject.SetActive(true);
     }
 
     private void OnFingerTap(LeanFinger obj)
