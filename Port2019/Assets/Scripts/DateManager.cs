@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class DateManager : TGlobalSingleton<DateManager>
 {
-    private DateStats dateStats;
+
+    public DateStats currentDate;
 
     private AllDateSpecHolder holder;
 

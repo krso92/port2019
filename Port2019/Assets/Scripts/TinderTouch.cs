@@ -6,6 +6,7 @@ using Lean.Touch;
 using System;
 using DG.Tweening;
 using TMPro;
+using RedBlueGames.Tools.TextTyper;
 
 public class TinderTouch : MonoBehaviour
 {
@@ -14,6 +15,9 @@ public class TinderTouch : MonoBehaviour
     private Sprite currChar;
 
     private DateStats myDateStats;
+
+    public TextTyper testTextTyper;
+
 
     public TextMeshProUGUI textInfo;
     public RectTransform textMatch;
@@ -156,10 +160,12 @@ public class TinderTouch : MonoBehaviour
         if (currX > XMaxMove)
         {
             MatchWinner();
+            LikeSound();
         }
         else if (currX < -XMaxMove)
         {
             SetNextLook();
+            NopeSound();
         }
         else
         {
@@ -176,7 +182,10 @@ public class TinderTouch : MonoBehaviour
 
     IEnumerator LoadNextScene()
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(1f);
+        MatchWinSound();
+        DateManager.Instance.currentDate = myDateStats;
+        yield return new WaitForSeconds(2f);
         UtilLoadScene.Instance.SelectScene("work1");
     }
 
@@ -196,6 +205,9 @@ public class TinderTouch : MonoBehaviour
             countChar = 0;
         }
         mainImage.localPosition = resetPosition;
+        DOTween.Kill(mainImage);
+        mainImage.eulerAngles = Vector3.zero;
+        mainImage.DOLocalRotate(new Vector3(0f, 360f, 0f), 1f,RotateMode.LocalAxisAdd);
         mainImage.DOLocalMove(startPosition, 1.2f).SetEase(Ease.OutExpo).OnComplete(OnSetupComplete);
     }
 
@@ -203,6 +215,8 @@ public class TinderTouch : MonoBehaviour
     {
         inputEnabled = true;
         textInfo.gameObject.SetActive(true);
+        testTextTyper.TypeText(textInfo.text);
+
     }
 
     private void OnFingerTap(LeanFinger obj)
@@ -230,5 +244,18 @@ public class TinderTouch : MonoBehaviour
     {
         return null;
     }
+    public void MatchWinSound()
+    {
 
+    }
+
+    public void NopeSound()
+    {
+
+    }
+
+    public void LikeSound()
+    {
+
+    }
 }
