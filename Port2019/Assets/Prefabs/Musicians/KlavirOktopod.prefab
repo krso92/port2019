@@ -175,7 +175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   loopClip: {fileID: 8300000, guid: ea210b5952b6032438518fc45e7b2e0a, type: 3}
-  band: 0
+  bands: 00000000
   creature: 4
   animator: {fileID: 6066280714598710447}
   audioSource: {fileID: 8440795697588268899}
