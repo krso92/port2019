@@ -8,8 +8,9 @@ using DG.Tweening;
 
 public class TinderTouch : MonoBehaviour
 {
-
-    public List<Transform> Characters = new List<Transform>();
+    private int countChar = 0;
+    public List<Sprite> Characters = new List<Sprite>();
+    private Sprite currChar;
 
     public RectTransform YesPanel;
     public RectTransform NoPanel;
@@ -47,6 +48,7 @@ public class TinderTouch : MonoBehaviour
         LeanTouch.OnFingerExpired += OnFingerUp;
 
         XMaxMove = Screen.width / screenDivider;
+        ClosePanels();
     }
 
     private void OnFingerUp(LeanFinger obj)
@@ -144,6 +146,15 @@ public class TinderTouch : MonoBehaviour
         {
         }
         ClosePanels();
+    }
+
+    private void SetNextLook()
+    {
+        currChar = Characters[countChar];
+        if (countChar + 1 < Characters.Count)
+        {
+            countChar++;
+        }
     }
 
     private void OnFingerTap(LeanFinger obj)
