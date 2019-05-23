@@ -194,6 +194,7 @@ public class TinderTouch : MonoBehaviour
         inputEnabled = false;
         myDateStats = DateManager.Instance.GetByIndex(countChar);
         currChar = DateManager.Instance.GetByIndex(countChar).ProfileImage;
+        mainImage.GetComponent<SpriteRenderer>().sprite = currChar;
         textInfo.gameObject.SetActive(false);
         textInfo.text = DateManager.Instance.GetByIndex(countChar).Description;
         if (countChar + 1 < DateManager.Instance.DatesCount)
