@@ -99,5 +99,9 @@ public class AudioManager : TGlobalSingleton<AudioManager>
         {
             initialMusician = null;
         }
+        else if (initialMusician == musician)
+        {
+            initialMusician = Musician.GetPlayingMusician();
+        }
     }
 }
