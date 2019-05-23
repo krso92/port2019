@@ -6,6 +6,10 @@ using UnityEngine.Audio;
 public class AudioManager : TGlobalSingleton<AudioManager>
 {
 
+    // Handling musicians state
+
+    private Musician initialMusician;
+    private int count;
 
     public AudioMixer masterMixer;
 
@@ -30,6 +34,15 @@ public class AudioManager : TGlobalSingleton<AudioManager>
             audioSources.Add(gameObject.AddComponent<AudioSource>());
             audioSources[i].outputAudioMixerGroup = musicGroup;
         }
+        GameManager.Instance.OnMusicianStartPlaying += PlayMusicChannel;
+        GameManager.Instance.OnMusicianStopPlaying += StopMusicChannel;
+        count = 0;
+    }
+
+    private void OnDisable()
+    {
+        GameManager.Instance.OnMusicianStartPlaying -= PlayMusicChannel;
+        GameManager.Instance.OnMusicianStopPlaying -= StopMusicChannel;
     }
 
     // Update is called once per frame
@@ -61,5 +74,30 @@ public class AudioManager : TGlobalSingleton<AudioManager>
 
         Debug.LogError("There is not enough audio sources for all sounds!!!");
         return null;
+    }
+
+    private void PlayMusicChannel(Musician musician)
+    {
+        float time = 0;
+        if (initialMusician == null)
+        {
+            initialMusician = musician;
+        }
+        else
+        {
+            time = initialMusician.CurrentPlayTime;
+        }
+        musician.PlayMusic(time);
+        count++;
+    }
+
+    private void StopMusicChannel(Musician musician)
+    {
+        musician.StopMusic();
+        count--;
+        if (count == 0)
+        {
+            initialMusician = null;
+        }
     }
 }
