@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allStats:
   - name: Alisa Fisher
-    profileImage: {fileID: 21300000, guid: e906b0b309e8676409a2c785f1646b0d, type: 3}
+    profileImage: {fileID: 21300008, guid: 95104b5f4c66145238c240f53ed77830, type: 3}
     description: Fish and a half
     likes:
       bandPattern: 00000000

@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 78bb3dc813faa4cf99b427df8fb11905
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Sir James_GO/Sir James_GO
+    100002: 'Sir James_GO/Sir James_GO/     Less than a mile  Business and tourism,
+      Budva Lorem ipsum '
+    100004: Sir James_GO/Sir James_GO/Fotka
+    100006: Sir James_GO/Sir James_GO/Location icon
+    100008: Sir James_GO/Sir James_GO/Rectangle 3
+    100010: Sir James_GO/Sir James_GO/Sir james, 49
+    400000: Sir James_GO/Sir James_GO/Transform
+    400002: Sir James_GO/Sir James_GO/     Less than a mile  Business and tourism,
+      Budva Lorem ipsum /Transform
+    400004: Sir James_GO/Sir James_GO/Fotka/Transform
+    400006: Sir James_GO/Sir James_GO/Location icon/Transform
+    400008: Sir James_GO/Sir James_GO/Rectangle 3/Transform
+    400010: Sir James_GO/Sir James_GO/Sir james, 49/Transform
+    2800000: Sir James
+    21200000: Sir James_GO/Sir James_GO/     Less than a mile  Business and tourism,
+      Budva Lorem ipsum /SpriteRenderer
+    21200002: Sir James_GO/Sir James_GO/Fotka/SpriteRenderer
+    21200004: Sir James_GO/Sir James_GO/Location icon/SpriteRenderer
+    21200006: Sir James_GO/Sir James_GO/Rectangle 3/SpriteRenderer
+    21200008: Sir James_GO/Sir James_GO/Sir james, 49/SpriteRenderer
+    21300000: 028149b72b80943b894084ab7bd59849
+    21300002: 67011e39c0f4342dea707a944dfe61af
+    21300004: 86d019cfdddc04f64806614ce9378222
+    21300006: 00018c4361a3e40718e944a6412d0b8c
+    21300008: 7215c8b00dbf442f6b98eeb97fa9cebc
+    100100000: Sir James_GO
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Sir james, 49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2499
+      width: 784
+      height: 185
+    spriteID: 028149b72b80943b894084ab7bd59849
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -322, y: 1440}
+  - name: Location icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 796
+      y: 2499
+      width: 69
+      height: 103
+    spriteID: 67011e39c0f4342dea707a944dfe61af
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1942, y: 1089}
+  - name: Rectangle 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2692
+      width: 496
+      height: 6
+    spriteID: 86d019cfdddc04f64806614ce9378222
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2734, y: 1369}
+  - name: '     Less than a mile  Business and tourism, Budva Lorem ipsum '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1745
+      width: 1082
+      height: 746
+    spriteID: 00018c4361a3e40718e944a6412d0b8c
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2734, y: 1043}
+  - name: Fotka
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1187
+      height: 1733
+    spriteID: 7215c8b00dbf442f6b98eeb97fa9cebc
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1415, y: -246}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 4000, y: 2250}
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Lik 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 42
+    mosaicPosition: {x: 0, y: 0}
+  - name: Sir james, 49
+    spriteName: Sir james, 49
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 028149b72b80943b894084ab7bd59849
+    layerID: 10
+    mosaicPosition: {x: 4, y: 2499}
+  - name: Location icon
+    spriteName: Location icon
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 67011e39c0f4342dea707a944dfe61af
+    layerID: 24
+    mosaicPosition: {x: 796, y: 2499}
+  - name: Rectangle 3
+    spriteName: Rectangle 3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 86d019cfdddc04f64806614ce9378222
+    layerID: 33
+    mosaicPosition: {x: 4, y: 2692}
+  - name: '     Less than a mile  Business and tourism, Budva Lorem ipsum '
+    spriteName: '     Less than a mile  Business and tourism, Budva Lorem ipsum '
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 00018c4361a3e40718e944a6412d0b8c
+    layerID: 22
+    mosaicPosition: {x: 4, y: 1745}
+  - name: Fotka
+    spriteName: Fotka
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7215c8b00dbf442f6b98eeb97fa9cebc
+    layerID: 30
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Sir James
+  prefabAssetName: Sir James_GO

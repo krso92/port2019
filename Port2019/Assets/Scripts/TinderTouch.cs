@@ -20,6 +20,9 @@ public class TinderTouch : MonoBehaviour
 
 
     public TextMeshProUGUI textInfo;
+    public TextMeshProUGUI textLocation;
+    public TextMeshProUGUI textPlace;
+    public TextMeshProUGUI textNameBig;
     public RectTransform textMatch;
 
     public Vector3 startPosition;
@@ -175,7 +178,7 @@ public class TinderTouch : MonoBehaviour
 
     private void MatchWinner()
     {
-        textMatch.GetComponent<Animator>().SetTrigger("Anim");
+        textMatch.GetChild(0).GetComponent<Animator>().SetTrigger("Anim");
         //TODO Anim match
         StartCoroutine(LoadNextScene());
     }
