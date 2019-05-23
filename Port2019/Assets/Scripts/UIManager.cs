@@ -11,7 +11,6 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log("????");
         profileImage.sprite = DateManager.Instance.currentDate.ProfileImage;
     }
 
