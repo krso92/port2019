@@ -13,6 +13,8 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
 
     private void Start()
     {
+        creatures = new HashSet<CreatureType>();
+        bandMembers = new List<BandType>();
         GameManager.Instance.OnMusicianStartPlaying += AddMusician;
         GameManager.Instance.OnMusicianStopPlaying += RemoveMusician;
     }

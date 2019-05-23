@@ -58,7 +58,6 @@ public class Musician : MonoBehaviour
 
     protected void OnMouseUpAsButton()
     {
-        Debug.Log("Musician about to start playing");
         isPlaying = !isPlaying;
 
         UpdateAnimator();
@@ -66,10 +65,12 @@ public class Musician : MonoBehaviour
         if (isPlaying)
         {
             GameManager.Instance.StartPlaying(this);
+            Debug.Log(creature.ToString() + " start playing");
         }
         else
         {
             GameManager.Instance.StopPlaying(this);
+            Debug.Log(creature.ToString() + " stop playing");
         }
     }
     
