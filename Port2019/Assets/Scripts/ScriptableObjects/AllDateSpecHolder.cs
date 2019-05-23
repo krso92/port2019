@@ -17,4 +17,9 @@ public class AllDateSpecHolder : ScriptableObject
             return allStats[index];
         }
     }
+
+    public DateStats GetByIndex(int index)
+    {
+        return allStats[index];
+    }
 }

@@ -6,13 +6,31 @@ public class DateManager : TGlobalSingleton<DateManager>
 {
     private DateStats dateStats;
 
-    public DateStats DateStats
+    private AllDateSpecHolder holder;
+
+    private AllDateSpecHolder Holder
     {
         get
         {
-            // TODO -- finish -> get by index, index is in some singleton or somewhere
-            var holder = Resources.Load<AllDateSpecHolder>("DateSpecs");
-            return holder.GetRandom;
+            if (holder == null)
+            {
+                holder = Resources.Load<AllDateSpecHolder>("DateSpecs");
+            }
+            return holder;
         }
+    }
+
+    public DateStats GetRandomDateStats
+    {
+        get
+        {
+
+            return Holder.GetRandom;
+        }
+    }
+
+    public DateStats GetByIndex(int index)
+    {
+        return Holder.GetByIndex(index);
     }
 }

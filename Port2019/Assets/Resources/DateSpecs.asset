@@ -14,6 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allStats:
   - name: Alisa Fisher
+    profileImage: {fileID: 0}
+    description: Fish and a half
     likes:
       bandPattern: 00000000
       creaturePattern: 00000000
