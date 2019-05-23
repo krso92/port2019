@@ -7,14 +7,14 @@ public class Musician : MonoBehaviour
     [SerializeField]
     private AudioClip loopClip;
     [SerializeField]
-    private BandType band;
+    private List<BandType> bands;
     [SerializeField]
     private CreatureType creature;
 
     // getters
 
     public AudioClip LoopClip { get => loopClip; }
-    public BandType Band { get => band; }
+    public List<BandType> Bands { get => bands; }
     public CreatureType Creature { get => creature; }
     public bool IsPlaying { get => isPlaying; }
 

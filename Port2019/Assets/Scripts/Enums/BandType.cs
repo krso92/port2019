@@ -4,7 +4,7 @@ using UnityEngine;
 
 public enum BandType
 {
-    Band1,
-    Band2,
-    Band3
+    LaganiBend,
+    EnergicniBend,
+    ModerniBend,
 }

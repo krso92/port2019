@@ -8,6 +8,12 @@ public class DateStats
     [SerializeField]
     private string name;
     [SerializeField]
+    [TextArea]
+    private string distance;
+    [SerializeField]
+    [TextArea]
+    private string jobTitle;
+    [SerializeField]
     private Sprite profileImage;
     [SerializeField]
     [TextArea]
@@ -20,6 +26,16 @@ public class DateStats
     public string Name
     {
         get => name;
+    }
+
+    public string Distance
+    {
+        get => distance;
+    }
+
+    public string JobTitle
+    {
+        get => JobTitle;
     }
 
     public Sprite ProfileImage

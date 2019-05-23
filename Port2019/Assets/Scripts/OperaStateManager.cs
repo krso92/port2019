@@ -60,15 +60,18 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     {
         count++;
         creatures.Add(musician.Creature);
-        bandMembers.Add(musician.Band);
+        bandMembers.AddRange(musician.Bands);
     }
 
     private void RemoveMusician(Musician musician)
     {
         count--;
         creatures.Remove(musician.Creature);
-        var toRemove = bandMembers.Single(b => b == musician.Band);
-        bandMembers.Remove(toRemove);
+        var toRemove = bandMembers.Intersect(musician.Bands).ToList();
+        foreach (var tr in toRemove)
+        {
+            bandMembers.Remove(tr);
+        }
     }
 
     // logic
