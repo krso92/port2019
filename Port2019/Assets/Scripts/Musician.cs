@@ -85,4 +85,15 @@ public class Musician : MonoBehaviour
             animator.SetTrigger("idle");
         }
     }
+
+    public virtual void PlayMusic(float startTime)
+    {
+        audioSource.time = startTime;
+        audioSource.Play();
+    }
+
+    public virtual void StopMusic()
+    {
+        audioSource.Stop();
+    }
 }
