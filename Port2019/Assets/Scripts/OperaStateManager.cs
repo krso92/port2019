@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,15 +27,34 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     {
         count++;
         creatures.Add(musician.Creature);
-        // TODO -- zavrsi
-        // probljeme
+        bandMembers.Add(musician.Band);
     }
 
     private void RemoveMusician(Musician musician)
     {
         count--;
         creatures.Remove(musician.Creature);
-        // TODO -- zavrsi
-        // probljeme
+        var toRemove = bandMembers.Single(b => b == musician.Band);
+        bandMembers.Remove(toRemove);
+    }
+
+    // logic
+
+    private IEnumerator CheckDateMood()
+    {
+        yield return null;
+        while (enabled)
+        {
+            yield return new WaitForSeconds(5f);
+            CheckSatisfactionLevel();
+            // TODO -- update date mood on UI
+        }
+    }
+
+    private void CheckSatisfactionLevel()
+    {
+        Debug.Log("Check satisfaction level");
+        var dateStats = DateManager.Instance.DateStats;
+
     }
 }
