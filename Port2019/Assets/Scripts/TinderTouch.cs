@@ -17,6 +17,10 @@ public class TinderTouch : MonoBehaviour
     private DateStats myDateStats;
 
     public TextTyper testTextTyper;
+    public TextTyper NameTextTyper;
+    public TextTyper LocationTextTyper;
+    public TextTyper JobTextTyper;
+
 
 
     public TextMeshProUGUI textInfo;
@@ -59,7 +63,7 @@ public class TinderTouch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //NameTextTyper.
         UtilLoadScene.Instance.SetActiveScene("Wolf");
         LeanTouch.OnFingerTap += OnFingerTap;
         LeanTouch.OnGesture += OnSwipe;
@@ -178,6 +182,7 @@ public class TinderTouch : MonoBehaviour
 
     private void MatchWinner()
     {
+        textMatch.GetComponent<Image>().enabled = true;
         textMatch.GetChild(0).GetComponent<Animator>().SetTrigger("Anim");
         //TODO Anim match
         StartCoroutine(LoadNextScene());
@@ -219,8 +224,18 @@ public class TinderTouch : MonoBehaviour
     {
         inputEnabled = true;
         textInfo.gameObject.SetActive(true);
-        testTextTyper.TypeText(textInfo.text);
+        StartCoroutine(TurnOnTexts());
+    }
 
+    private IEnumerator TurnOnTexts()
+    {
+        NameTextTyper.TypeText(textNameBig.text);
+        yield return new WaitForSeconds(1.5f);
+        LocationTextTyper.TypeText(textNameBig.text);
+        yield return new WaitForSeconds(1f);
+        JobTextTyper.TypeText(textNameBig.text);
+        yield return new WaitForSeconds(1f);
+        testTextTyper.TypeText(textInfo.text);
     }
 
     private void OnFingerTap(LeanFinger obj)
