@@ -88,6 +88,7 @@ public class Musician : MonoBehaviour
 
     public virtual void PlayMusic(float startTime)
     {
+        audioSource.clip = loopClip;
         audioSource.time = startTime;
         audioSource.Play();
     }
