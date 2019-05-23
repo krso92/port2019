@@ -5,6 +5,13 @@ using UnityEngine;
 
 public class OperaStateManager : TGlobalSingleton<OperaStateManager>
 {
+    /*
+        indexi za state checking (dole u korutini)
+        0 - CreatureType points
+        1 - BandType point
+        2 - ?? Count points ??
+    */
+
     // state holders
     // koliko cega i kako to posle lako proveriti?
     private int count;
@@ -49,16 +56,56 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         while (enabled)
         {
             yield return new WaitForSeconds(5f);
-            CheckSatisfactionLevel();
+            int[] a = CheckSatisfactionLevel();
+            /*
+            Debug.Log("//////////////////////////////////");
+            Debug.Log(a[0]);
+            Debug.Log(a[1]);
+            Debug.Log("//////////////////////////////////");
+            */
             // TODO -- update date mood on UI
         }
     }
 
-    private void CheckSatisfactionLevel()
+    private int[] CheckSatisfactionLevel()
     {
         Debug.Log("Check satisfaction level");
         var dateStats = DateManager.Instance.DateStats;
-        Debug.Log(dateStats);
-        // TODO -- finish
+        int[] res = new int[3];
+        res[0] = GetCreaturePoints(dateStats);
+        res[1] = GetBandPoints(dateStats);
+        // not actually used now
+        res[2] = 0;
+        return res;
+    }
+
+    private int GetCreaturePoints(DateStats stats)
+    {
+        int sum = 0;
+        foreach (CreatureType creature in creatures) {
+            // ako se u date stats u creature patternu nalazi u likes +1
+            // ako u dislikes -1
+            // else nista
+            if (stats.Likes.CreaturePattern.Contains(creature))
+            {
+                sum++;
+            }
+            else if (stats.Dislikes.CreaturePattern.Contains(creature))
+            {
+                sum--;
+            }
+        }
+        return sum;
+    }
+
+    private int GetBandPoints(DateStats stats)
+    {
+        int sum = 0;
+        foreach(BandType band in bandMembers)
+        {
+            sum += stats.Likes.BandPattern.Count(b => b == band);
+            sum -= stats.Dislikes.BandPattern.Count(b => b == band);
+        }
+        return sum;
     }
 }

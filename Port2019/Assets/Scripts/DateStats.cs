@@ -12,6 +12,11 @@ public class DateStats
     [SerializeField]
     private SatisfactionPattern dislikes;
 
+    public string Name
+    {
+        get => name;
+    }
+
     public SatisfactionPattern Likes
     {
         get => likes;
