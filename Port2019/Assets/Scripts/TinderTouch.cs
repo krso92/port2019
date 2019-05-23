@@ -11,7 +11,8 @@ public class TinderTouch : MonoBehaviour
 
     public List<Transform> Characters = new List<Transform>();
 
-
+    public RectTransform YesPanel;
+    public RectTransform NoPanel;
 
     public Transform mainImage;
 
@@ -45,15 +46,14 @@ public class TinderTouch : MonoBehaviour
         LeanTouch.OnGesture += OnSwipe;
         LeanTouch.OnFingerExpired += OnFingerUp;
 
-        //XMaxMove = Screen.width / screenDivider;
+        XMaxMove = Screen.width / screenDivider;
     }
 
     private void OnFingerUp(LeanFinger obj)
     {
         fingerCount = 0;
         OnFingerSwipe();
-
-        print("finger up!!!");
+        ValidateOn();
     }
 
     private void OnSwipe(List<LeanFinger> obj)
@@ -84,17 +84,18 @@ public class TinderTouch : MonoBehaviour
         if (currX > XMaxMove)
         {
             x = XMaxMove;
-            Match();
+            ShowMatch();
         }
         else if (currX < -XMaxMove)
         {
 
             x = -XMaxMove;
-            Next();
+            ShowNext();
         }
         else
         {
             x = currX;
+            ClosePanels();
         }
         if (fingerCount == 0)
         {
@@ -112,14 +113,37 @@ public class TinderTouch : MonoBehaviour
         //mainImage.transform.eulerAngles = new Vector3(0f, 0f, rotateTem);
     }
 
-    private void Match()
+    private void ShowMatch()
     {
-
+        YesPanel.gameObject.SetActive(true);
     }
 
-    private void Next()
+    private void ShowNext()
     {
+        NoPanel.gameObject.SetActive(true);
+    }
 
+    private void ClosePanels()
+    {
+        YesPanel.gameObject.SetActive(false);
+        NoPanel.gameObject.SetActive(false);
+    }
+
+    private void ValidateOn()
+    {
+        float currX = currPos.x;
+        if (currX > XMaxMove)
+        {
+            print("Its a match");
+        }
+        else if (currX < -XMaxMove)
+        {
+            print("Its next");
+        }
+        else
+        {
+        }
+        ClosePanels();
     }
 
     private void OnFingerTap(LeanFinger obj)
