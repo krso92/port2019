@@ -17,6 +17,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         bandMembers = new List<BandType>();
         GameManager.Instance.OnMusicianStartPlaying += AddMusician;
         GameManager.Instance.OnMusicianStopPlaying += RemoveMusician;
+        StartCoroutine(CheckDateMood());
     }
 
     private void OnDisable()
@@ -57,6 +58,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     {
         Debug.Log("Check satisfaction level");
         var dateStats = DateManager.Instance.DateStats;
-
+        Debug.Log(dateStats);
+        // TODO -- finish
     }
 }

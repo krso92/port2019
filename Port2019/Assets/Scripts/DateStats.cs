@@ -6,6 +6,8 @@ using UnityEngine;
 public class DateStats
 {
     [SerializeField]
+    private string name;
+    [SerializeField]
     private SatisfactionPattern likes;
     [SerializeField]
     private SatisfactionPattern dislikes;
@@ -19,7 +21,4 @@ public class DateStats
     {
         get => dislikes;
     }
-
-    // TODO -- hold stats somewhere
-
 }
