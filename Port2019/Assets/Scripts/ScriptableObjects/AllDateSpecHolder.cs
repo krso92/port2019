@@ -22,4 +22,12 @@ public class AllDateSpecHolder : ScriptableObject
     {
         return allStats[index];
     }
+
+    public int Count
+    {
+        get
+        {
+            return allStats.Count;
+        }
+    }
 }

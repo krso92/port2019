@@ -13,7 +13,10 @@ public class TinderTouch : MonoBehaviour
     public List<Sprite> Characters = new List<Sprite>();
     private Sprite currChar;
 
+    private DateStats myDateStats;
+
     public TextMeshProUGUI textInfo;
+    public RectTransform textMatch;
 
     public Vector3 startPosition;
     public Vector3 resetPosition;
@@ -50,6 +53,7 @@ public class TinderTouch : MonoBehaviour
     void Start()
     {
 
+        UtilLoadScene.Instance.SetActiveScene("Wolf");
         LeanTouch.OnFingerTap += OnFingerTap;
         LeanTouch.OnGesture += OnSwipe;
         LeanTouch.OnFingerExpired += OnFingerUp;
@@ -143,6 +147,7 @@ public class TinderTouch : MonoBehaviour
     {
         YesPanel.gameObject.SetActive(false);
         NoPanel.gameObject.SetActive(false);
+        //textInfo.gameObject.SetActive(false);
     }
 
     private void ValidateOn()
@@ -150,7 +155,7 @@ public class TinderTouch : MonoBehaviour
         float currX = currPos.x;
         if (currX > XMaxMove)
         {
-            print("Its a match");
+            MatchWinner();
         }
         else if (currX < -XMaxMove)
         {
@@ -162,17 +167,36 @@ public class TinderTouch : MonoBehaviour
         ClosePanels();
     }
 
+    private void MatchWinner()
+    {
+        textMatch.GetComponent<Animator>().SetTrigger("Anim");
+        //TODO Anim match
+        StartCoroutine(LoadNextScene());
+    }
+
+    IEnumerator LoadNextScene()
+    {
+        yield return new WaitForSeconds(3f);
+        UtilLoadScene.Instance.SelectScene("work1");
+    }
+
     private void SetNextLook()
     {
         inputEnabled = false;
-        textInfo.gameObject.SetActive(true);
-        currChar = Characters[countChar];
-        if (countChar + 1 < Characters.Count)
+        myDateStats = DateManager.Instance.GetByIndex(countChar);
+        currChar = DateManager.Instance.GetByIndex(countChar).ProfileImage;
+        textInfo.gameObject.SetActive(false);
+        textInfo.text = DateManager.Instance.GetByIndex(countChar).Description;
+        if (countChar + 1 < DateManager.Instance.DatesCount)
         {
             countChar++;
         }
+        else
+        {
+            countChar = 0;
+        }
         mainImage.localPosition = resetPosition;
-        mainImage.DOLocalMove(startPosition, 0.8f).SetEase(Ease.OutCubic).OnComplete(OnSetupComplete);
+        mainImage.DOLocalMove(startPosition, 1.2f).SetEase(Ease.OutExpo).OnComplete(OnSetupComplete);
     }
 
     private void OnSetupComplete()
