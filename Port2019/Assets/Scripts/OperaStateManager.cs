@@ -70,7 +70,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     private int[] CheckSatisfactionLevel()
     {
         Debug.Log("Check satisfaction level");
-        var dateStats = DateManager.Instance.DateStats;
+        var dateStats = DateManager.Instance.GetRandomDateStats;
         int[] res = new int[3];
         res[0] = GetCreaturePoints(dateStats);
         res[1] = GetBandPoints(dateStats);
