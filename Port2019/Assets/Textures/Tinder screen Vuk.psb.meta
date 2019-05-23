@@ -1,0 +1,546 @@
+fileFormatVersion: 2
+guid: 1e83739e9dc034ed2a253e1835d08d62
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Tinder screen Vuk_GO/Tinder screen Vuk_GO
+    100002: 'Tinder screen Vuk_GO/Tinder screen Vuk_GO/     Less than a mile  Business
+      and tourism, Budva Lorem ipsum '
+    100004: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Background
+    100006: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Background_1
+    100008: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Fotka
+    100010: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Information
+    100012: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Location icon
+    100014: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rectangle 3
+    100016: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3
+    100018: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy
+    100020: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 2
+    100022: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 3
+    100024: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 4
+    100026: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Sir james, 49
+    400000: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Transform
+    400002: Tinder screen Vuk_GO/Tinder screen Vuk_GO/     Less than a mile  Business
+      and tourism, Budva Lorem ipsum /Transform
+    400004: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Background/Transform
+    400006: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Background_1/Transform
+    400008: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Fotka/Transform
+    400010: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Information/Transform
+    400012: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Location icon/Transform
+    400014: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rectangle 3/Transform
+    400016: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3/Transform
+    400018: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy/Transform
+    400020: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 2/Transform
+    400022: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 3/Transform
+    400024: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 4/Transform
+    400026: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Sir james, 49/Transform
+    2800000: Tinder screen Vuk
+    21200000: Tinder screen Vuk_GO/Tinder screen Vuk_GO/     Less than a mile  Business
+      and tourism, Budva Lorem ipsum /SpriteRenderer
+    21200002: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Background/SpriteRenderer
+    21200004: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Background_1/SpriteRenderer
+    21200006: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Fotka/SpriteRenderer
+    21200008: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Information/SpriteRenderer
+    21200010: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Location icon/SpriteRenderer
+    21200012: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rectangle 3/SpriteRenderer
+    21200014: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3/SpriteRenderer
+    21200016: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy/SpriteRenderer
+    21200018: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 2/SpriteRenderer
+    21200020: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 3/SpriteRenderer
+    21200022: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Rounded Rectangle 3 copy 4/SpriteRenderer
+    21200024: Tinder screen Vuk_GO/Tinder screen Vuk_GO/Sir james, 49/SpriteRenderer
+    21300000: dba9a5293957c4249a358cd2ad33130f
+    21300002: beae3c5db1c644e199d43eed9a4e92d2
+    21300004: 1245e485afa31459a83791b942f3f9f1
+    21300006: 62f09daa399954206a4aa2acef53fbd3
+    21300008: 0640bf5bd9a99485082f5d7ccd844c28
+    21300010: 9cd0cba84f7db4348962b32a1bbaf264
+    21300012: 0198eb5b4603f44be87028f5871e69c3
+    21300014: 98931d81cfa884d2d8d2220d1d1cd243
+    21300016: f3131adcd5bb14506abbbb73c9888c99
+    21300018: 0d1cd6c88c1804a618e0002bf4f2ddef
+    21300020: 92001e844768a426eae94a8a187c927d
+    21300022: 5b61c3a951ee64f33b38c6b40817de26
+    21300024: cb78fd5321deb46ba9e0e187fc0f7f97
+    100100000: Tinder screen Vuk_GO
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Sir james, 49
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7015
+      width: 784
+      height: 185
+    spriteID: dba9a5293957c4249a358cd2ad33130f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -322, y: 5956}
+  - name: Location icon
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 937
+      y: 7015
+      width: 69
+      height: 103
+    spriteID: beae3c5db1c644e199d43eed9a4e92d2
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1801, y: 5605}
+  - name: Rectangle 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7208
+      width: 496
+      height: 6
+    spriteID: 1245e485afa31459a83791b942f3f9f1
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2734, y: 5885}
+  - name: '     Less than a mile  Business and tourism, Budva Lorem ipsum '
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 6261
+      width: 1082
+      height: 746
+    spriteID: 62f09daa399954206a4aa2acef53fbd3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2734, y: 5559}
+  - name: Rounded Rectangle 3 copy 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 937
+      y: 7180
+      width: 189
+      height: 10
+    spriteID: 0640bf5bd9a99485082f5d7ccd844c28
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1403, y: 5260}
+  - name: Rounded Rectangle 3 copy 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 937
+      y: 7126
+      width: 190
+      height: 10
+    spriteID: 9cd0cba84f7db4348962b32a1bbaf264
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1186, y: 5206}
+  - name: Rounded Rectangle 3 copy 2
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 937
+      y: 7144
+      width: 190
+      height: 10
+    spriteID: 0198eb5b4603f44be87028f5871e69c3
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -969, y: 5224}
+  - name: Rounded Rectangle 3 copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 937
+      y: 7162
+      width: 190
+      height: 10
+    spriteID: 98931d81cfa884d2d8d2220d1d1cd243
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -752, y: 5242}
+  - name: Rounded Rectangle 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7222
+      width: 189
+      height: 10
+    spriteID: f3131adcd5bb14506abbbb73c9888c99
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1469, y: 5302}
+  - name: Information
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 796
+      y: 7015
+      width: 133
+      height: 132
+    spriteID: 0d1cd6c88c1804a618e0002bf4f2ddef
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1600, y: 6691}
+  - name: Fotka
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4520
+      width: 1187
+      height: 1733
+    spriteID: 92001e844768a426eae94a8a187c927d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1415, y: 4270}
+  - name: Background
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 4000
+      height: 2250
+    spriteID: 5b61c3a951ee64f33b38c6b40817de26
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 4}
+  - name: Background_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2262
+      width: 4000
+      height: 2250
+    spriteID: cb78fd5321deb46ba9e0e187fc0f7f97
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4, y: 2262}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 4000, y: 2250}
+  textureActualWidth: 4096
+  textureActualHeight: 8192
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Lik 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 42
+    mosaicPosition: {x: 0, y: 0}
+  - name: Sir james, 49
+    spriteName: Sir james, 49
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dba9a5293957c4249a358cd2ad33130f
+    layerID: 10
+    mosaicPosition: {x: 4, y: 7015}
+  - name: Location icon
+    spriteName: Location icon
+    isGroup: 0
+    parentIndex: 0
+    spriteID: beae3c5db1c644e199d43eed9a4e92d2
+    layerID: 24
+    mosaicPosition: {x: 937, y: 7015}
+  - name: Rectangle 3
+    spriteName: Rectangle 3
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 1245e485afa31459a83791b942f3f9f1
+    layerID: 33
+    mosaicPosition: {x: 4, y: 7208}
+  - name: '     Less than a mile  Business and tourism, Budva Lorem ipsum '
+    spriteName: '     Less than a mile  Business and tourism, Budva Lorem ipsum '
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 62f09daa399954206a4aa2acef53fbd3
+    layerID: 22
+    mosaicPosition: {x: 4, y: 6261}
+  - name: Bar
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 30
+    mosaicPosition: {x: 0, y: 0}
+  - name: Rounded Rectangle 3 copy 4
+    spriteName: Rounded Rectangle 3 copy 4
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 0640bf5bd9a99485082f5d7ccd844c28
+    layerID: 29
+    mosaicPosition: {x: 937, y: 7180}
+  - name: Rounded Rectangle 3 copy 3
+    spriteName: Rounded Rectangle 3 copy 3
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 9cd0cba84f7db4348962b32a1bbaf264
+    layerID: 28
+    mosaicPosition: {x: 937, y: 7126}
+  - name: Rounded Rectangle 3 copy 2
+    spriteName: Rounded Rectangle 3 copy 2
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 0198eb5b4603f44be87028f5871e69c3
+    layerID: 27
+    mosaicPosition: {x: 937, y: 7144}
+  - name: Rounded Rectangle 3 copy
+    spriteName: Rounded Rectangle 3 copy
+    isGroup: 0
+    parentIndex: 5
+    spriteID: 98931d81cfa884d2d8d2220d1d1cd243
+    layerID: 26
+    mosaicPosition: {x: 937, y: 7162}
+  - name: Rounded Rectangle 3
+    spriteName: Rounded Rectangle 3
+    isGroup: 0
+    parentIndex: 5
+    spriteID: f3131adcd5bb14506abbbb73c9888c99
+    layerID: 25
+    mosaicPosition: {x: 4, y: 7222}
+  - name: Information
+    spriteName: Information
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 0d1cd6c88c1804a618e0002bf4f2ddef
+    layerID: 39
+    mosaicPosition: {x: 796, y: 7015}
+  - name: Fotka
+    spriteName: Fotka
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 92001e844768a426eae94a8a187c927d
+    layerID: 40
+    mosaicPosition: {x: 4, y: 4520}
+  - name: Background
+    spriteName: Background
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 5b61c3a951ee64f33b38c6b40817de26
+    layerID: 96
+    mosaicPosition: {x: 4, y: 4}
+  - name: Background
+    spriteName: Background_1
+    isGroup: 0
+    parentIndex: -1
+    spriteID: cb78fd5321deb46ba9e0e187fc0f7f97
+    layerID: 1
+    mosaicPosition: {x: 4, y: 2262}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Tinder screen Vuk
+  prefabAssetName: Tinder screen Vuk_GO
