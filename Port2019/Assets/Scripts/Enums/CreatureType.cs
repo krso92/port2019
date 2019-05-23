@@ -4,7 +4,13 @@ using UnityEngine;
 
 public enum CreatureType
 {
-    Creature1,
-    Creature2,
-    Creature3
+    Gramofon,
+    CikaHarfa,
+    KitoZvecka,
+    CikaSaksofon,
+    Oktoklavir,
+    BubanjSkoljka,
+    Bubanj2,
+    FrulasRiba,
+    Bass,
 }

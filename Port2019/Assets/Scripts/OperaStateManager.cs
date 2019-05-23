@@ -67,7 +67,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     {
         count--;
         creatures.Remove(musician.Creature);
-        var toRemove = bandMembers.Single(b => b == musician.Band);
+        var toRemove = bandMembers.Find(b => b == musician.Band);
         bandMembers.Remove(toRemove);
     }
 
