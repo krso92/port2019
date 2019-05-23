@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class Musician : MonoBehaviour
 {
-
     [SerializeField]
     private AudioClip loopClip;
-    [SerializeField]
+    
+    // For more dynamic animations maybe??
+    // ignore if not needed
     private float speed;
 
     // component references
@@ -38,13 +39,24 @@ public class Musician : MonoBehaviour
 
     protected void OnMouseUpAsButton()
     {
-        // invoke event
-
-        // start music
-        // change animation
-        // 
-        Debug.Log("Musician starts playing");
+        Debug.Log("Musician about to start playing");
         isPlaying = !isPlaying;
-        // pokreni animacije znajuci ovo
+
+        UpdateAnimator();
+
+        GameManager.Instance.TriggerMusicianStartPlayingEvent(this);
+    }
+
+
+    protected virtual void UpdateAnimator()
+    {
+        if (isPlaying)
+        {
+            animator.SetTrigger("play");
+        }
+        else
+        {
+            animator.SetTrigger("idle");
+        }
     }
 }
