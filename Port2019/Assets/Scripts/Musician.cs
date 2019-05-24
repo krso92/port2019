@@ -103,11 +103,11 @@ public class Musician : MonoBehaviour
     {
         audioSource.clip = loopClip;
         audioSource.time = startTime;
-        audioSource.Play();
+        AudioManager.Instance.FadeIn(audioSource);
     }
 
     public virtual void StopMusic()
     {
-        audioSource.Stop();
+        AudioManager.Instance.FadeOut(audioSource);
     }
 }

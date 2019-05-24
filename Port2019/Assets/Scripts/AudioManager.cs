@@ -80,9 +80,7 @@ public class AudioManager : TGlobalSingleton<AudioManager>
 
     public void FadeOut(AudioSource source, float duration = 1f)
     {
-        //source.volume = 0f;
         source.DOFade(0f, duration).OnComplete(source.Stop);
-        //source.Play();
     }
 
 
