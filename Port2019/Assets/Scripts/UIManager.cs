@@ -6,7 +6,7 @@ using DG.Tweening;
 using TMPro;
 using System;
 
-public class UIManager : MonoBehaviour
+public class UIManager : TGlobalSingleton<UIManager>
 {
     [SerializeField]
     private Image profileImage;
@@ -16,7 +16,13 @@ public class UIManager : MonoBehaviour
     public CanvasGroup bubble;
     public TextMeshProUGUI text;
 
+    [SerializeField]
+    private TextMeshProUGUI timerText;
 
+    public void SetTimerText(string text)
+    {
+        timerText.text = text;
+    }
 
 
     // Start is called before the first frame update

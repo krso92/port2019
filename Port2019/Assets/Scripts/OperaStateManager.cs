@@ -92,11 +92,12 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         for (int i = 0; i < REQUEST_COUNT; i++)
         {
             // TODO -- UI of your date -- show text (tell stuff)
+            // pisi u UI
+
             float then = Time.time;
             while (then + TIME_FOR_OPERA > Time.time)
             {
-                // TODO -- counter text
-                Debug.Log("Remaining time"  + (then - Time.time));
+                UIManager.Instance.SetTimerText((then + TIME_FOR_OPERA - Time.time).ToString("00"));
 
                 yield return new WaitForSeconds(1f);
                 if (GetBandPoints(date, bandMembers, i) == PLAYERS_IN_BAND)
