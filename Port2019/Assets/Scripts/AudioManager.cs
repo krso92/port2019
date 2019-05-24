@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
+using DG.Tweening;
 
 public class AudioManager : TGlobalSingleton<AudioManager>
 {
 
     // Handling musicians state
+    [SerializeField] Lasp.FilterType _filterType;
+
 
     private Musician initialMusician;
     private int count;
@@ -48,7 +51,9 @@ public class AudioManager : TGlobalSingleton<AudioManager>
     // Update is called once per frame
     void Update()
     {
-        
+        var peak = Lasp.AudioInput.GetPeakLevelDecibel(_filterType);
+        var rms = Lasp.AudioInput.CalculateRMSDecibel(_filterType);
+        //print(string.Format("peak is {0} and rms {1}", peak, rms));
     }
 
     public void PlayMusicAudio(AudioClip clip)
@@ -59,6 +64,25 @@ public class AudioManager : TGlobalSingleton<AudioManager>
     public void PlayMusicAudio(AudioClip clip,float time)
     {
         //masterMixer.
+    }
+
+    public void ReturnFrequency(AudioMixerGroup group)
+    {
+
+    }
+
+    public void FadeIn(AudioSource source,float duration = 1f)
+    {
+        source.volume = 0f;
+        source.Play();
+        source.DOFade(1f,duration);
+    }
+
+    public void FadeOut(AudioSource source, float duration = 1f)
+    {
+        //source.volume = 0f;
+        source.DOFade(0f, duration).OnComplete(source.Stop);
+        //source.Play();
     }
 
 

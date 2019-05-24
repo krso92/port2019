@@ -194,7 +194,7 @@ public class TinderTouch : MonoBehaviour
         MatchWinSound();
         DateManager.Instance.currentDate = myDateStats;
         yield return new WaitForSeconds(2f);
-        UtilLoadScene.Instance.SelectScene("work1");
+        UtilLoadScene.Instance.SelectScene("LoadingScene","work1");
     }
 
     private void SetNextLook()

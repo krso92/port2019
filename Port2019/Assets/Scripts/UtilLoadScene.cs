@@ -11,6 +11,7 @@ public class UtilLoadScene : TGlobalSingleton<UtilLoadScene>
     public string sceneLoad;
     private Scene loadingScene;
     private bool isLoading;
+    public string nextSceneToLoad;
 
     public void SetActiveScene(string scene)
     {
@@ -27,6 +28,19 @@ public class UtilLoadScene : TGlobalSingleton<UtilLoadScene>
 
         //set the active scene to the next scene
     }
+
+    public void SelectScene(string sceneToLoad,string nextScene)
+    {
+        nextSceneToLoad = nextScene;
+        StartCoroutine(FadeOutAndIn(sceneToLoad));
+        //loadingScene = SceneManager.GetActiveScene();
+        activeScene = sceneToLoad;
+        //UnloadScene();
+
+        //set the active scene to the next scene
+    }
+
+
 
     public void UnloadScene()
     {
