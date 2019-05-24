@@ -174,6 +174,8 @@ public class TinderTouch : MonoBehaviour
         if (currX > XMaxMove)
         {
             MatchWinner();
+            inputEnabled = false;
+
             LikeSound();
         }
         else if (currX < -XMaxMove)

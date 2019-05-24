@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using TMPro;
 using System;
 
 public class UIManager : MonoBehaviour
@@ -12,6 +13,9 @@ public class UIManager : MonoBehaviour
 
     public Image blackImage;
 
+    public CanvasGroup bubble;
+    public TextMeshProUGUI text;
+
 
 
 
@@ -20,6 +24,7 @@ public class UIManager : MonoBehaviour
     {
         profileImage.sprite = DateManager.Instance.currentDate.GameImage;
         blackImage.DOFade(0f, 1.5f);
+        bubble.DOFade(0f, 0f);
     }
 
     // Update is called once per frame
@@ -30,7 +35,9 @@ public class UIManager : MonoBehaviour
 
     public void BackToTinder() 
     {
+        blackImage.raycastTarget = true;
         blackImage.DOFade(1f, 1.5f).OnComplete(() => LoadNewScene());
+
 
     }
 

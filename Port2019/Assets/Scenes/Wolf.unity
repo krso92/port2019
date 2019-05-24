@@ -2455,7 +2455,7 @@ MonoBehaviour:
   XThreshold: 0
   XMaxMove: 1
   screenDivider: 6
-  ZMaxRotate: 15
+  ZMaxRotate: 10
   speedTween: 0.45
   blackImage: {fileID: 717576008}
 --- !u!4 &1759755233
