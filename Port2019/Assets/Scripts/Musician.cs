@@ -71,19 +71,26 @@ public class Musician : MonoBehaviour
 
     protected void OnMouseUpAsButton()
     {
-        isPlaying = !isPlaying;
-
-        UpdateAnimator();
-
-        if (isPlaying)
+        if (GameManager.Instance.freeMode || AudioManager.Instance.CurrentlyPlayingCount < 5)
         {
-            GameManager.Instance.StartPlaying(this);
-            Debug.Log(creature.ToString() + " start playing");
+            isPlaying = !isPlaying;
+
+            UpdateAnimator();
+
+            if (isPlaying)
+            {
+                GameManager.Instance.StartPlaying(this);
+                Debug.Log(creature.ToString() + " start playing");
+            }
+            else
+            {
+                GameManager.Instance.StopPlaying(this);
+                Debug.Log(creature.ToString() + " stop playing");
+            }
         }
         else
         {
-            GameManager.Instance.StopPlaying(this);
-            Debug.Log(creature.ToString() + " stop playing");
+            Debug.Log("Can not play music, not in free mode and 5 players already playing");
         }
     }
     
@@ -103,11 +110,11 @@ public class Musician : MonoBehaviour
     {
         audioSource.clip = loopClip;
         audioSource.time = startTime;
-        audioSource.Play();
+        AudioManager.Instance.FadeIn(audioSource);
     }
 
     public virtual void StopMusic()
     {
-        audioSource.Stop();
+        AudioManager.Instance.FadeOut(audioSource);
     }
 }
