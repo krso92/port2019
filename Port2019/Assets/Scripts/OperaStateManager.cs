@@ -15,7 +15,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     public const float TIME_FOR_OPERA = 30;
     public const int REQUEST_COUNT = 3;
 
-    public const int MAX_SELECTED = 7;
+    public const int MAX_SELECTED = 8;
     public const int PLAYERS_IN_BAND = 5;
 
     private int requestIndex = 0;
