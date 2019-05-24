@@ -13,6 +13,9 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     */
 
     public const float TIME_FOR_OPERA = 60 * 2;
+    public const int REQUEST_COUNT = 3;
+
+    private int requestIndex = 0;
 
     // state holders
     // koliko cega i kako to posle lako proveriti?
@@ -79,23 +82,28 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     private IEnumerator CheckDateMood()
     {
         yield return null;
-        float then = Time.time;
-
-        while (then + TIME_FOR_OPERA > Time.time)
+        for (int i = 0; i < REQUEST_COUNT; i++)
         {
-            yield return new WaitForSeconds(5f);
+            float then = Time.time;
+            while (then + TIME_FOR_OPERA > Time.time)
+            {
+                yield return new WaitForSeconds(1f);
+                
+                int[] scoreNow = CheckSatisfactionLevel();
+                
+                Debug.Log("/////////////Satisfaction/////////////");
+                Debug.Log(scoreNow[0]);
+                Debug.Log(scoreNow[1]);
+                Debug.Log("//////////////////////////////////////");
 
-            int[] scoreNow = CheckSatisfactionLevel();
-            
-            Debug.Log("/////////////Satisfaction/////////////");
-            Debug.Log(scoreNow[0]);
-            Debug.Log(scoreNow[1]);
-            Debug.Log("//////////////////////////////////////");
-
-            UpdateScore(scoreNow);
-            // TODO -- update date mood on UI, determine MAX and place it on range scroll
+                UpdateScore(scoreNow);
+                // TODO -- update date mood on UI, determine MAX and place it on range scroll
+                // TODO -- check pattern if correct then break
+            }
+            // TODO -- show something
+            Debug.Log("Ciklus done, score is [" + scoreSum[0] + ", " + scoreSum[1] + "]");
         }
-        Debug.Log("Done, score is [" + scoreSum[0] + ", " + scoreSum[1] + "]");
+        // TODO -- game is done
     }
 
     private int[] CheckSatisfactionLevel()
