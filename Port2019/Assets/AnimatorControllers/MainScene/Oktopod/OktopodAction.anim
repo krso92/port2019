@@ -87,7 +87,7 @@ AnimationClip:
     attribute: m_Enabled
     path: Klavir
     classID: 114
-    script: {fileID: 11500000, guid: 2608538603b69444a80e635b58eccee7, type: 3}
+    script: {fileID: 11500000, guid: 59461dfef2d175044990d61f1ba70e15, type: 3}
   m_PPtrCurves: []
   m_SampleRate: 60
   m_WrapMode: 0
@@ -106,7 +106,7 @@ AnimationClip:
     - serializedVersion: 2
       path: 1364034874
       attribute: 3305885265
-      script: {fileID: 11500000, guid: 2608538603b69444a80e635b58eccee7, type: 3}
+      script: {fileID: 11500000, guid: 59461dfef2d175044990d61f1ba70e15, type: 3}
       typeID: 114
       customType: 24
       isPPtrCurve: 0
@@ -315,7 +315,7 @@ AnimationClip:
     attribute: m_Enabled
     path: Klavir
     classID: 114
-    script: {fileID: 11500000, guid: 2608538603b69444a80e635b58eccee7, type: 3}
+    script: {fileID: 11500000, guid: 59461dfef2d175044990d61f1ba70e15, type: 3}
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
