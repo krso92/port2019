@@ -12,8 +12,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         2 - ?? Count points ??
     */
 
-    // public const float TIME_FOR_OPERA = 60 * 2;
-    public const float TIME_FOR_OPERA = 20;
+    public const float TIME_FOR_OPERA = 60 * 2;
     public const int REQUEST_COUNT = 3;
 
     public const int MAX_SELECTED = 5;
@@ -115,13 +114,12 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         yield return null;
         var date = DateManager.Instance.currentDate;
         var myBand = date.Likes[0].BandPattern[0];
-        Debug.Log(myBand.ToString());
 
         for (int i = 0; i < REQUEST_COUNT; i++)
         {
             if (i == 0)
             {
-                UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription);
+                UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription, false, true);
             }
             else if (i == 1)
             {

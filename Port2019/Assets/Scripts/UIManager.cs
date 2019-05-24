@@ -66,20 +66,34 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         profileImage.sprite = DateManager.Instance.currentDate.GameImage;
-        blackImage.DOFade(0f, 1.5f);
-        bubble.DOFade(0f, 0f);
+        blackImage.DOFade(0f, 3f);
+        //bubble.DOFade(0f, 0f);
         scoreGroup.DOFade(0f, 0f);
     }
     
-    public void ShowBubble(string text, bool forceHideProfileImage = false)
+    public void ShowBubble(string text, bool forceHideProfileImage = false, bool delayWithBubble = false)
     {
-        bubble.DOFade(1f, 1f);
+        if (delayWithBubble)
+        {
+            bubble.DOFade(0f, 0f);
+            Debug.Log("kako valja");
+            Invoke("BubbleFadeIn", 3f);
+        }
+        else
+        {
+            BubbleFadeIn();
+        }
         this.text.text = text;
         Invoke("HideBubble", 12f);
         if (forceHideProfileImage)
         {
             Invoke("HideProfileImage", 12f);
         }
+    }
+
+    private void BubbleFadeIn()
+    {
+        bubble.DOFade(1f, 1f);
     }
 
     public void HideCounterText()
