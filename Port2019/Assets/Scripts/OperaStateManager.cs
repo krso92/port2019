@@ -12,7 +12,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         2 - ?? Count points ??
     */
 
-    public const float TIME_FOR_OPERA = 60 * 2;
+    public const float TIME_FOR_OPERA = 45;
     public const int REQUEST_COUNT = 3;
 
     public const int MAX_SELECTED = 5;
@@ -191,7 +191,6 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
 
             int scoreNow = GetBandPoints(date, bandMembers, 0);
             scoreSum += scoreNow;
-            UIManager.Instance.SetScoreText(scoreSum.ToString());
             Debug.Log("Ciklus done, score is [" + scoreNow + "]");
         }
 
