@@ -91,8 +91,9 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         var date = DateManager.Instance.currentDate;
         for (int i = 0; i < REQUEST_COUNT; i++)
         {
-            // TODO -- UI of your date -- show text (tell stuff)
-            // pisi u UI
+            UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription);
+            // wait 
+            // then hide (internal)
 
             float then = Time.time;
             while (then + TIME_FOR_OPERA > Time.time)
@@ -105,6 +106,9 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
                     break;
                 }
             }
+            // za svaki slucaj
+            UIManager.Instance.SetTimerText("00");
+
             int scoreNow = GetBandPoints(date, bandMembers, i);
             Debug.Log("Ciklus done, score is [" + scoreNow + "]");
         }

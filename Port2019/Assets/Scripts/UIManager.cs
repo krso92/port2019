@@ -32,6 +32,18 @@ public class UIManager : TGlobalSingleton<UIManager>
         blackImage.DOFade(0f, 1.5f);
         bubble.DOFade(0f, 0f);
     }
+    
+    public void ShowBubble(string text)
+    {
+        bubble.DOFade(1f, 1f);
+        this.text.text = text;
+        Invoke("HideBubble", 8f);
+    }
+
+    public void HideBubble()
+    {
+        bubble.DOFade(0f, 1f);
+    }
 
     // Update is called once per frame
     void Update()
