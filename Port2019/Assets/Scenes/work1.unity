@@ -7608,6 +7608,7 @@ MonoBehaviour:
   blackImage: {fileID: 2108750544}
   bubble: {fileID: 1698486434}
   text: {fileID: 1328196954}
+  timerText: {fileID: 549232721}
 --- !u!1001 &1302878354
 PrefabInstance:
   m_ObjectHideFlags: 0

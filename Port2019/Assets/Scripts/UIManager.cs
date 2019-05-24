@@ -6,7 +6,7 @@ using DG.Tweening;
 using TMPro;
 using System;
 
-public class UIManager : MonoBehaviour
+public class UIManager : TGlobalSingleton<UIManager>
 {
     [SerializeField]
     private Image profileImage;
@@ -16,7 +16,13 @@ public class UIManager : MonoBehaviour
     public CanvasGroup bubble;
     public TextMeshProUGUI text;
 
+    [SerializeField]
+    private TextMeshProUGUI timerText;
 
+    public void SetTimerText(string text)
+    {
+        timerText.text = text;
+    }
 
 
     // Start is called before the first frame update
@@ -25,6 +31,18 @@ public class UIManager : MonoBehaviour
         profileImage.sprite = DateManager.Instance.currentDate.GameImage;
         blackImage.DOFade(0f, 1.5f);
         bubble.DOFade(0f, 0f);
+    }
+    
+    public void ShowBubble(string text)
+    {
+        bubble.DOFade(1f, 1f);
+        this.text.text = text;
+        Invoke("HideBubble", 8f);
+    }
+
+    public void HideBubble()
+    {
+        bubble.DOFade(0f, 1f);
     }
 
     // Update is called once per frame
