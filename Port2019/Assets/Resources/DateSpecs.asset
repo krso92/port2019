@@ -19,7 +19,9 @@ MonoBehaviour:
     profileImage: {fileID: 21300008, guid: 95104b5f4c66145238c240f53ed77830, type: 3}
     description: Fish and a half
     likes:
-    - bandPattern: 00000000
+    - puzzleDescription: Ocu nesto lagano
+      bandPattern: 00000000
       creaturePattern: 
-    - bandPattern: 01000000
+    - puzzleDescription: ocu nesto energicno
+      bandPattern: 01000000
       creaturePattern: 
