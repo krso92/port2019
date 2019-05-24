@@ -26,16 +26,16 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     private HashSet<CreatureType> creatures;
     private List<BandType> bandMembers;
 
-    private int[] scoreSum;
+    private int scoreSum;
 
-    public int[] Score
+    public int Score
     {
         get => scoreSum;
     }
-
+    
     public void ResetScore()
     {
-        scoreSum = new int[3];
+        scoreSum = 0;
     }
 
     /*
@@ -110,6 +110,8 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
             UIManager.Instance.SetTimerText("00");
 
             int scoreNow = GetBandPoints(date, bandMembers, i);
+            scoreSum += scoreNow;
+            UIManager.Instance.SetScoreText(scoreSum.ToString());
             Debug.Log("Ciklus done, score is [" + scoreNow + "]");
         }
         // TODO -- game is done
