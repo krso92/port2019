@@ -16,4 +16,5 @@ public enum CreatureType
     RakLevi,
     RakCentralni,
     RakDesni,
+    MajmunGitarista,
 }
