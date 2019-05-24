@@ -103,13 +103,14 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         Debug.Log("Check satisfaction level");
         var dateStats = DateManager.Instance.GetRandomDateStats;
         int[] res = new int[3];
-        res[0] = GetCreaturePoints(dateStats);
+        //res[0] = GetCreaturePoints(dateStats);
         res[1] = GetBandPoints(dateStats);
         // not actually used now
         res[2] = 0;
         return res;
     }
 
+    /*
     private int GetCreaturePoints(DateStats stats)
     {
         int sum = 0;
@@ -117,6 +118,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
             // ako se u date stats u creature patternu nalazi u likes +1
             // ako u dislikes -1
             // else nista
+            
             if (stats.Likes.CreaturePattern.Contains(creature))
             {
                 sum++;
@@ -128,14 +130,13 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         }
         return sum;
     }
-
+    */
     private int GetBandPoints(DateStats stats)
     {
         int sum = 0;
         foreach(BandType band in bandMembers)
         {
-            sum += stats.Likes.BandPattern.Count(b => b == band);
-            sum -= stats.Dislikes.BandPattern.Count(b => b == band);
+            sum += stats.GetBandPatternPoints(band);
         }
         return sum;
     }

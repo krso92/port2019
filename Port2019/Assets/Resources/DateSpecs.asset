@@ -20,8 +20,9 @@ MonoBehaviour:
     description: Fish and a half and quater by quater by quater by quater by quater
       by quater by quater by and eight.
     likes:
+    - puzzleDescription: Ocu nesto lagano
       bandPattern: 00000000
-      creaturePattern: 00000000
-    dislikes:
+      creaturePattern: 
+    - puzzleDescription: ocu nesto energicno
       bandPattern: 01000000
-      creaturePattern: 01000000
+      creaturePattern: 
