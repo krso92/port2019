@@ -96,9 +96,12 @@ public class TinderTouch : MonoBehaviour
 
     private void OnFingerUp(LeanFinger obj)
     {
+        if (startPos.x > XMaxMove && startPos.x < Screen.width - XMaxMove)
+        {
+            ValidateOn();
+        }
         fingerCount = 0;
         OnFingerSwipe();
-        ValidateOn();
     }
 
     private void OnSwipe(List<LeanFinger> obj)
