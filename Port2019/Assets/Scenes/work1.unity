@@ -6837,6 +6837,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gramofon
       objectReference: {fileID: 0}
+    - target: {fileID: 2942498210461214945, guid: 83315a05a5028d7419710e904d3a1909,
+        type: 3}
+      propertyPath: OutputAudioMixerGroup
+      value: 
+      objectReference: {fileID: 243827818911582574, guid: 2dec175036fc344c684593a8678afacc,
+        type: 2}
     - target: {fileID: 709776898750871761, guid: 83315a05a5028d7419710e904d3a1909,
         type: 3}
       propertyPath: m_LocalPosition.x

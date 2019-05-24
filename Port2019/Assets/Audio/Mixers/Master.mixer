@@ -22,6 +22,7 @@ AudioMixerController:
     - 2584f7a93d8df483ba2c34c5bf4b470b
     - 1baca96cca675417fad447fca6e294c2
     - ae0850cea74b84efb8c0584865e7cc8a
+    - f8e280a524b204f579bd3340fae15d45
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -38,6 +39,7 @@ AudioMixerGroupController:
   - {fileID: 243024760332578046}
   - {fileID: 243230770610906256}
   - {fileID: 243390611123731026}
+  - {fileID: 243827818911582574}
   m_Volume: 9343db91d72e0459b9c7de6bec5f11a7
   m_Pitch: 5d9551bd51e0a467f84c58db52513160
   m_Effects:
@@ -125,6 +127,24 @@ AudioMixerGroupController:
   m_Mute: 0
   m_Solo: 0
   m_BypassEffects: 0
+--- !u!243 &243827818911582574
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Gramofon
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: f8e280a524b204f579bd3340fae15d45
+  m_Children: []
+  m_Volume: 820faa4ca4340438e8bfbda672ceb68b
+  m_Pitch: c4e6cc0a1271a460a890792e2bcf4838
+  m_Effects:
+  - {fileID: 244999467964296550}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
 --- !u!244 &244155490975137372
 AudioMixerEffectController:
   m_ObjectHideFlags: 3
@@ -163,6 +183,20 @@ AudioMixerEffectController:
   m_EffectID: 345107d8ee96e455ab0bc517e8af25d6
   m_EffectName: Attenuation
   m_MixLevel: 94cd419dc11794c9bb8bfbc07be79ff3
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244999467964296550
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 
+  m_EffectID: bbefeb64678884cfa8bce12c22907f9d
+  m_EffectName: Attenuation
+  m_MixLevel: 63d971caf84ef488f86f4f31318cdd74
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
