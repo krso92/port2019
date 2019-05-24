@@ -13,4 +13,7 @@ public enum CreatureType
     Bubanj2,
     FrulasRiba,
     Bass,
+    RakLevi,
+    RakCentralni,
+    RakDesni,
 }
