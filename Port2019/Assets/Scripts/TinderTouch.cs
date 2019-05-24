@@ -194,7 +194,7 @@ public class TinderTouch : MonoBehaviour
         MatchWinSound();
         DateManager.Instance.currentDate = myDateStats;
         yield return new WaitForSeconds(2f);
-        UtilLoadScene.Instance.SelectScene("LoadingScene","work1");
+        UtilLoadScene.Instance.SelectScene("Cutscene","work1");
     }
 
     private void SetNextLook()
@@ -234,11 +234,11 @@ public class TinderTouch : MonoBehaviour
     private IEnumerator TurnOnTexts()
     {
         NameTextTyper.TypeText(myDateStats.Name);
-        yield return new WaitForSeconds(1.5f);
+        yield return new WaitForSeconds(1f);
         LocationTextTyper.TypeText(myDateStats.Distance);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.2f);
         JobTextTyper.TypeText(myDateStats.JobTitle);
-        yield return new WaitForSeconds(1f);
+        yield return new WaitForSeconds(0.25f);
         testTextTyper.TypeText(myDateStats.Description);
     }
 

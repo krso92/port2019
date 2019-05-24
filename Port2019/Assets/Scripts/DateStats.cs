@@ -17,6 +17,14 @@ public class DateStats
     [SerializeField]
     private Sprite profileImage;
     [SerializeField]
+    private Sprite gameImage;
+
+    public Sprite GameImage
+    {
+        get => gameImage;
+    }
+
+    [SerializeField]
     [TextArea]
     private string description;
     [SerializeField]

@@ -14,11 +14,57 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allStats:
   - name: Alisa Fisher, 24
-    distance: Two miles away
+    distance: Less than two miles away
     jobTitle: Stewerdess, Tivat
     profileImage: {fileID: 21300008, guid: 95104b5f4c66145238c240f53ed77830, type: 3}
-    description: Fish and a half and quater by quater by quater by quater by quater
-      by quater by quater by and eight.
+    gameImage: {fileID: 21300018, guid: c6ec1a117500c4dcdb7a6b71dadfc273, type: 3}
+    description: I like to be as far away from my home as possible. I work as a stewardess
+      and I am saving money to start my dancing career and one day become a famous
+      dancer.
+    likes:
+    - puzzleDescription: Ocu nesto lagano
+      bandPattern: 00000000
+      creaturePattern: 
+    - puzzleDescription: ocu nesto energicno
+      bandPattern: 01000000
+      creaturePattern: 
+  - name: Sir James, 49
+    distance: Less than mile away
+    jobTitle: Art Investor, Budva
+    profileImage: {fileID: 21300008, guid: 78bb3dc813faa4cf99b427df8fb11905, type: 3}
+    gameImage: {fileID: 21300020, guid: c6ec1a117500c4dcdb7a6b71dadfc273, type: 3}
+    description: 40 years of my life I spent traveling and enjoying art living on
+      my father's heritage. I enjoy listening to classical music and even more enjoying
+      long walks by the sea.
+    likes:
+    - puzzleDescription: Ocu nesto lagano
+      bandPattern: 00000000
+      creaturePattern: 
+    - puzzleDescription: ocu nesto energicno
+      bandPattern: 01000000
+      creaturePattern: 
+  - name: Bobby, 24
+    distance: Five miles away
+    jobTitle: Bodybuilder, Podgorica
+    profileImage: {fileID: 21300008, guid: 1c406fd7fc7314fddb851e065e4b8f41, type: 3}
+    gameImage: {fileID: 21300016, guid: c6ec1a117500c4dcdb7a6b71dadfc273, type: 3}
+    description: I'm into people, that's why I live on the surface but sometimes I
+      like to visit my sea-home. Currently, I have 8,7% of fat, pure muscles.
+    likes:
+    - puzzleDescription: Ocu nesto lagano
+      bandPattern: 00000000
+      creaturePattern: 
+    - puzzleDescription: ocu nesto energicno
+      bandPattern: 01000000
+      creaturePattern: 
+  - name: Becky Raider, 29
+    distance: Ten miles away
+    jobTitle: Taxi driver, Kotor
+    profileImage: {fileID: 21300008, guid: 64e53abb813ec4e70833f91ae4b06988, type: 3}
+    gameImage: {fileID: 21300014, guid: c6ec1a117500c4dcdb7a6b71dadfc273, type: 3}
+    description: I'm totally a cat person (20 cats, 2 of them are pregnant). So I
+      work a lot because somebody has to put food on the table. I also draw my cats
+      and sell their paintings.
     likes:
     - puzzleDescription: Ocu nesto lagano
       bandPattern: 00000000

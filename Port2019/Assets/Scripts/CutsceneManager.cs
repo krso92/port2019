@@ -4,9 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
-public class LoadingScreenManager : MonoBehaviour
+public class CutsceneManager : MonoBehaviour
 {
-
     public Image blackImage;
     public float sceneLength;
     private AudioSource audioo;
@@ -14,14 +13,6 @@ public class LoadingScreenManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if (UtilLoadScene.Instance.nextSceneToLoad == null)
-        {
-            sceneLength = 7f;
-        }
-        else
-        {
-            sceneLength = 4f;
-        }
         audioo = GetComponent<AudioSource>();
         blackImage.DOFade(0f, 1.5f);
         AudioManager.Instance.FadeIn(audioo);
@@ -35,23 +26,14 @@ public class LoadingScreenManager : MonoBehaviour
         yield return new WaitForSeconds(sceneLength);
         AudioManager.Instance.FadeOut(audioo);
         yield return new WaitForSeconds(0.5f);
-        blackImage.DOFade(1f, 1.5f).OnComplete(() =>LoadNewScene());
+        blackImage.DOFade(1f, 1.5f).OnComplete(() => LoadNewScene());
 
     }
 
     private void LoadNewScene()
     {
         print("tries to loead new scene1");
-        if (UtilLoadScene.Instance.nextSceneToLoad == null)
-        {
-            UtilLoadScene.Instance.SelectScene("Wolf");
-
-        }
-        else
-        {
-            UtilLoadScene.Instance.SelectScene(UtilLoadScene.Instance.nextSceneToLoad);
-
-        }
+        UtilLoadScene.Instance.SelectScene(UtilLoadScene.Instance.nextSceneToLoad);
     }
 
     // Update is called once per frame

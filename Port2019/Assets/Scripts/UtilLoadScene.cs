@@ -11,7 +11,7 @@ public class UtilLoadScene : TGlobalSingleton<UtilLoadScene>
     public string sceneLoad;
     private Scene loadingScene;
     private bool isLoading;
-    public string nextSceneToLoad;
+    public string nextSceneToLoad = null;
 
     public void SetActiveScene(string scene)
     {

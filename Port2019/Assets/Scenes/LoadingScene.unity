@@ -738,7 +738,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 243230770610906256, guid: 2dec175036fc344c684593a8678afacc,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: 54cda1378e49d2a44a918729a851adf6, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -836,7 +836,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   blackImage: {fileID: 1133141894}
-  sceneLength: 6
+  sceneLength: 5
 --- !u!1 &1960859251
 GameObject:
   m_ObjectHideFlags: 0
