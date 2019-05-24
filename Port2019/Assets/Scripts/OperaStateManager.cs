@@ -141,6 +141,14 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
                     string lala = "Get rid of " + toRemoveString;
                     UIManager.Instance.ShowBubble(lala);
                 }
+                else if (toRemove.Count == 0)
+                {
+                    UIManager.Instance.ShowBubble("Why did they stop?");
+                }
+                else if (toRemove.Count < PLAYERS_IN_BAND)
+                {
+                    UIManager.Instance.ShowBubble("I like this, but I want to hear more sounds");
+                }
                 else
                 {
                     break;
@@ -165,6 +173,14 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
 
                     string lala = "I can't... I do not like " + toRemoveString;
                     UIManager.Instance.ShowBubble(lala);
+                }
+                else if (toRemove.Count == 0)
+                {
+                    UIManager.Instance.ShowBubble("Why did they stop?");
+                }
+                else if (toRemove.Count < PLAYERS_IN_BAND)
+                {
+                    UIManager.Instance.ShowBubble("I like this, but I want to hear more sounds");
                 }
                 else
                 {
