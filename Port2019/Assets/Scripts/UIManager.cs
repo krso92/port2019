@@ -6,8 +6,18 @@ using DG.Tweening;
 using TMPro;
 using System;
 
-public class UIManager : TGlobalSingleton<UIManager>
+public class UIManager : MonoBehaviour
 {
+    private static UIManager instance;
+
+    public static UIManager Instance
+    {
+        get
+        {
+            return instance;
+        }
+    }
+
     [SerializeField]
     private Image profileImage;
 
@@ -40,6 +50,16 @@ public class UIManager : TGlobalSingleton<UIManager>
     public void HideScoreText()
     {
         scoreGroup.DOFade(0f, 1f);
+    }
+
+    private void Awake()
+    {
+        instance = this;
+    }
+
+    private void OnDestroy()
+    {
+        instance = null;
     }
 
     // Start is called before the first frame update
