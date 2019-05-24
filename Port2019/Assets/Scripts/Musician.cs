@@ -138,4 +138,15 @@ public class Musician : MonoBehaviour
     {
         AudioManager.Instance.FadeOut(audioSource);
     }
+
+    private void OnMouseOver()
+    {
+        CursorManager.Instance.SetElementCursor();
+    }
+
+    private void OnMouseExit()
+    {
+        CursorManager.Instance.SetNormalCursor();
+
+    }
 }

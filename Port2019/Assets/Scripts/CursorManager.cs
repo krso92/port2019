@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class CursorManager : TGlobalSingleton<CursorManager>
 {
-    public Sprite defaultCursor;
     public Texture2D defCursor;
     public Texture2D newCursor;
 
@@ -15,13 +14,12 @@ public class CursorManager : TGlobalSingleton<CursorManager>
     // Start is called before the first frame update
     void Start()
     {
-        
+        DontDestroyOnLoad(gameObject);
     }
 
     public void SetElementCursor()
     {
         Cursor.SetCursor(newCursor, hotSpot, mode);
-
     }
 
     public void SetNormalCursor()
