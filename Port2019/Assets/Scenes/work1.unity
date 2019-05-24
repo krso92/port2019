@@ -6891,10 +6891,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 573198107}
-  - component: {fileID: 573198109}
-  - component: {fileID: 573198110}
-  - component: {fileID: 573198108}
-  - component: {fileID: 573198111}
   m_Layer: 0
   m_Name: ScriptsHolder
   m_TagString: Untagged
@@ -6916,74 +6912,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &573198108
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573198106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4146fe775e55e9b4789711d75a526368, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &573198109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573198106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2656e90432cefe94da97bd07fb1d591b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  freeMode: 0
---- !u!114 &573198110
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573198106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 372792a46e9d2784dab02a26b1e18633, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  currentDate:
-    name: 
-    distance: 
-    jobTitle: 
-    profileImage: {fileID: 0}
-    gameImage: {fileID: 0}
-    description: 
-    likes:
-    - puzzleDescription: 
-      bandPattern: 
-      creaturePattern: 
-    - puzzleDescription: 
-      bandPattern: 
-      creaturePattern: 
---- !u!114 &573198111
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 573198106}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf0c2c8e82d38411baae31de623bace3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _filterType: 0
-  masterMixer: {fileID: 24100000, guid: 2dec175036fc344c684593a8678afacc, type: 2}
-  musicVolume: 1
-  effectsVolume: 0.8
-  ambientVolume: 0.8
 --- !u!1001 &583924500
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7596,10 +7524,10 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

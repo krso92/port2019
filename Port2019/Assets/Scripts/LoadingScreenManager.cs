@@ -17,6 +17,7 @@ public class LoadingScreenManager : MonoBehaviour
         if (UtilLoadScene.Instance.nextSceneToLoad == null)
         {
             sceneLength = 7f;
+            ResolutionManager.Instance.InitSetup(); 
         }
         else
         {
