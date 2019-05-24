@@ -12,13 +12,38 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         2 - ?? Count points ??
     */
 
-    public const float TIME_FOR_OPERA = 30;
+    // public const float TIME_FOR_OPERA = 60 * 2;
+    public const float TIME_FOR_OPERA = 20;
     public const int REQUEST_COUNT = 3;
 
-    public const int MAX_SELECTED = 8;
+    public const int MAX_SELECTED = 5;
     public const int PLAYERS_IN_BAND = 5;
 
     private int requestIndex = 0;
+
+    private Dictionary<CreatureType, BandType> CreatureBandMapping
+    {
+        get
+        {
+            Dictionary<CreatureType, BandType> dict = new Dictionary<CreatureType, BandType>();
+            dict.Add(CreatureType.VinylPlayer, BandType.ModerniBend);
+            dict.Add(CreatureType.Harph, BandType.LaganiBend);
+            dict.Add(CreatureType.WhailGuy, BandType.ModerniBend);
+            dict.Add(CreatureType.SaxophoneCreep, BandType.LaganiBend);
+            dict.Add(CreatureType.Octopiano, BandType.LaganiBend);
+            dict.Add(CreatureType.LeftOisterDrum, BandType.EnergicniBend);
+            dict.Add(CreatureType.RightOisterDrum, BandType.EnergicniBend);
+            dict.Add(CreatureType.Fluter, BandType.LaganiBend);
+            dict.Add(CreatureType.BassMonster, BandType.ModerniBend);
+            dict.Add(CreatureType.LeftyCrab, BandType.EnergicniBend);
+            dict.Add(CreatureType.PapaLabstor, BandType.EnergicniBend);
+            dict.Add(CreatureType.RightyCrab, BandType.EnergicniBend);
+            dict.Add(CreatureType.GuitarMonkey, BandType.LaganiBend);
+            dict.Add(CreatureType.LeftRadio, BandType.ModerniBend);
+            dict.Add(CreatureType.RightRadio, BandType.ModerniBend);
+            return dict;
+        }
+    }
 
     // state holders
     // koliko cega i kako to posle lako proveriti?
@@ -89,9 +114,66 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     {
         yield return null;
         var date = DateManager.Instance.currentDate;
+        var myBand = date.Likes[0].BandPattern[0];
+        Debug.Log(myBand.ToString());
+
         for (int i = 0; i < REQUEST_COUNT; i++)
         {
-            UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription);
+            if (i == 0)
+            {
+                UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription);
+            }
+            else if (i == 1)
+            {
+                List<CreatureType> toRemove = new List<CreatureType>();
+                string toRemoveString = "";
+                var dict = CreatureBandMapping;
+                foreach (var c in creatures)
+                {
+                    if (dict[c] != myBand)
+                    {
+                        toRemove.Add(c);
+                        toRemoveString += c.ToString() + ", ";
+                    }
+                }
+                if (toRemove.Count != 0)
+                {
+                    toRemoveString.Remove(toRemoveString.Length - 3, 2);
+
+                    string lala = "Get rid of " + toRemoveString;
+                    UIManager.Instance.ShowBubble(lala);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            else if (i == 2)
+            {
+                List<CreatureType> toRemove = new List<CreatureType>();
+                string toRemoveString = "";
+                var dict = CreatureBandMapping;
+                foreach (var c in creatures)
+                {
+                    if (dict[c] != myBand)
+                    {
+                        toRemove.Add(c);
+                        toRemoveString += c.ToString() + ", ";
+                    }
+                }
+                if (toRemove.Count != 0)
+                {
+                    toRemoveString.Remove(toRemoveString.Length - 3, 2);
+
+                    string lala = "I can't... I do not like " + toRemoveString;
+                    UIManager.Instance.ShowBubble(lala);
+                }
+                else
+                {
+                    break;
+                }
+            }
+            
             // wait 
             // then hide (internal)
 
@@ -101,7 +183,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
                 UIManager.Instance.SetTimerText((then + TIME_FOR_OPERA - Time.time).ToString("00"));
 
                 yield return new WaitForSeconds(1f);
-                if (GetBandPoints(date, bandMembers, i) == PLAYERS_IN_BAND)
+                if (GetBandPoints(date, bandMembers, 0) == PLAYERS_IN_BAND)
                 {
                     break;
                 }
@@ -109,13 +191,21 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
             // za svaki slucaj
             UIManager.Instance.SetTimerText("00");
 
-            int scoreNow = GetBandPoints(date, bandMembers, i);
+            int scoreNow = GetBandPoints(date, bandMembers, 0);
             scoreSum += scoreNow;
             UIManager.Instance.SetScoreText(scoreSum.ToString());
             Debug.Log("Ciklus done, score is [" + scoreNow + "]");
         }
-        // TODO -- game is done
-        // activate free mode
+
+        if (GetBandPoints(date, bandMembers, 0) == PLAYERS_IN_BAND)
+        {
+            UIManager.Instance.ShowBubble("This is fantastic! Lets stay here and enjoy opera.");
+        }
+        else
+        {
+            UIManager.Instance.ShowBubble("I don't enjoy this music... I will go home, you can enjoy it by yourself!", true);
+        }
+        UIManager.Instance.HideCounterText();
         Debug.Log("All done!");
         GameManager.Instance.freeMode = true;
     }

@@ -71,11 +71,25 @@ public class UIManager : MonoBehaviour
         scoreGroup.DOFade(0f, 0f);
     }
     
-    public void ShowBubble(string text)
+    public void ShowBubble(string text, bool forceHideProfileImage = false)
     {
         bubble.DOFade(1f, 1f);
         this.text.text = text;
-        Invoke("HideBubble", 8f);
+        Invoke("HideBubble", 12f);
+        if (forceHideProfileImage)
+        {
+            Invoke("HideProfileImage", 12f);
+        }
+    }
+
+    public void HideCounterText()
+    {
+        timerText.DOFade(0f, 1f);
+    }
+
+    private void HideProfileImage()
+    {
+        profileImage.DOFade(0f, 1.5f);
     }
 
     public void HideBubble()

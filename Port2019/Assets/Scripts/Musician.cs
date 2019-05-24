@@ -111,7 +111,7 @@ public class Musician : MonoBehaviour
         }
         else
         {
-            Debug.Log("Can not play music, not in free mode and 7 players already playing");
+            Debug.Log("Can not play music, not in free mode and " + OperaStateManager.MAX_SELECTED + " players already playing");
         }
     }
     
