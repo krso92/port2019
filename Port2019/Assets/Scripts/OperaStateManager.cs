@@ -12,8 +12,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         2 - ?? Count points ??
     */
 
-    // public const float TIME_FOR_OPERA = 60 * 2;
-    public const float TIME_FOR_OPERA = 20;
+    public const float TIME_FOR_OPERA = 45;
     public const int REQUEST_COUNT = 3;
 
     public const int MAX_SELECTED = 5;
@@ -115,13 +114,12 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         yield return null;
         var date = DateManager.Instance.currentDate;
         var myBand = date.Likes[0].BandPattern[0];
-        Debug.Log(myBand.ToString());
 
         for (int i = 0; i < REQUEST_COUNT; i++)
         {
             if (i == 0)
             {
-                UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription);
+                UIManager.Instance.ShowBubble(date.Likes[i].PuzzleDescription, false, true);
             }
             else if (i == 1)
             {
@@ -142,6 +140,14 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
 
                     string lala = "Get rid of " + toRemoveString;
                     UIManager.Instance.ShowBubble(lala);
+                }
+                else if (toRemove.Count == 0)
+                {
+                    UIManager.Instance.ShowBubble("Why did they stop?");
+                }
+                else if (toRemove.Count < PLAYERS_IN_BAND)
+                {
+                    UIManager.Instance.ShowBubble("I like this, but I want to hear more sounds");
                 }
                 else
                 {
@@ -168,6 +174,14 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
                     string lala = "I can't... I do not like " + toRemoveString;
                     UIManager.Instance.ShowBubble(lala);
                 }
+                else if (toRemove.Count == 0)
+                {
+                    UIManager.Instance.ShowBubble("Why did they stop?");
+                }
+                else if (toRemove.Count < PLAYERS_IN_BAND)
+                {
+                    UIManager.Instance.ShowBubble("I like this, but I want to hear more sounds");
+                }
                 else
                 {
                     break;
@@ -193,7 +207,6 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
 
             int scoreNow = GetBandPoints(date, bandMembers, 0);
             scoreSum += scoreNow;
-            UIManager.Instance.SetScoreText(scoreSum.ToString());
             Debug.Log("Ciklus done, score is [" + scoreNow + "]");
         }
 

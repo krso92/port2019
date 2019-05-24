@@ -34,7 +34,8 @@ MonoBehaviour:
       my father's heritage. I enjoy listening to classical music and even more enjoying
       long walks by the sea.
     likes:
-    - puzzleDescription: Even some modern sounds would be nice.
+    - puzzleDescription: I am sick of the classics, I want something modern for a
+        change
       bandPattern: 02000000
       creaturePattern: 
   - name: Bobby, 24
@@ -45,7 +46,7 @@ MonoBehaviour:
     description: I'm into people, that's why I live on the surface but sometimes I
       like to visit my sea-home. Currently, I have 8,7% of fat, pure muscles.
     likes:
-    - puzzleDescription: Even some modern sounds would be nice.
+    - puzzleDescription: I like what young people like. Give me something new, trendy?
       bandPattern: 02000000
       creaturePattern: 
   - name: Becky Raider, 29
