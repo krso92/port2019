@@ -15,6 +15,7 @@ public class TinderTouch : MonoBehaviour
     public List<Sprite> Characters = new List<Sprite>();
     private Sprite currChar;
 
+
     private DateStats myDateStats;
 
     public TextTyper testTextTyper;
@@ -58,6 +59,10 @@ public class TinderTouch : MonoBehaviour
 
     public Image blackImage;
     private AudioSource audioo;
+    private AudioSource audioEffects;
+
+    public AudioClip nope;
+    public AudioClip like;
 
     private void Awake()
     {
@@ -74,11 +79,19 @@ public class TinderTouch : MonoBehaviour
         LeanTouch.OnFingerExpired += OnFingerUp;
 
         XMaxMove = Screen.width / screenDivider;
+        audioo = GetComponent<AudioSource>();
+        audioEffects = mainImage.GetComponent<AudioSource>();
         ClosePanels();
         SetNextLook();
-        audioo = GetComponent<AudioSource>();
         blackImage.DOFade(0f, 1.5f);
         AudioManager.Instance.FadeIn(audioo);
+    }
+
+    private void OnDestroy()
+    {
+        LeanTouch.OnFingerTap -= OnFingerTap;
+        LeanTouch.OnGesture -= OnSwipe;
+        LeanTouch.OnFingerExpired -= OnFingerUp;
     }
 
     private void OnFingerUp(LeanFinger obj)
@@ -181,7 +194,7 @@ public class TinderTouch : MonoBehaviour
         else if (currX < -XMaxMove)
         {
             SetNextLook();
-            NopeSound();
+           
         }
         else
         {
@@ -216,6 +229,7 @@ public class TinderTouch : MonoBehaviour
 
     private void SetNextLook()
     {
+        NopeSound();
         inputEnabled = false;
         textInfo.text = "";
         textLocation.text = "";
@@ -281,11 +295,18 @@ public class TinderTouch : MonoBehaviour
 
     public void NopeSound()
     {
-
+        audioEffects.clip = nope;
+        audioEffects.Play();
     }
 
     public void LikeSound()
     {
+        audioEffects.clip = like;
+        audioEffects.Play();
+    }
 
+    public void Quit()
+    {
+        GameManager.Instance.Exit();
     }
 }

@@ -27,4 +27,9 @@ public class GameManager : TGlobalSingleton<GameManager>
             OnMusicianStopPlaying.Invoke(musician);
         }
     }
+
+    public void Exit()
+    {
+        Application.Quit();
+    }
 }
