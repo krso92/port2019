@@ -19,11 +19,28 @@ public class UIManager : TGlobalSingleton<UIManager>
     [SerializeField]
     private TextMeshProUGUI timerText;
 
+    [SerializeField]
+    private CanvasGroup scoreGroup;
+
+    [SerializeField]
+    private TextMeshProUGUI scoreText;
+
     public void SetTimerText(string text)
     {
         timerText.text = text;
     }
 
+    public void SetScoreText(string text)
+    {
+        scoreGroup.DOFade(1f, 1f);
+        scoreText.text = text;
+        Invoke("HideScoreText", 5f);
+    }
+
+    public void HideScoreText()
+    {
+        scoreGroup.DOFade(0f, 1f);
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +48,7 @@ public class UIManager : TGlobalSingleton<UIManager>
         profileImage.sprite = DateManager.Instance.currentDate.GameImage;
         blackImage.DOFade(0f, 1.5f);
         bubble.DOFade(0f, 0f);
+        scoreGroup.DOFade(0f, 0f);
     }
     
     public void ShowBubble(string text)
