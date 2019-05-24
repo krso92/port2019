@@ -1,0 +1,283 @@
+fileFormatVersion: 2
+guid: 64e53abb813ec4e70833f91ae4b06988
+ScriptedImporter:
+  fileIDToRecycleName:
+    100000: Lik 4_GO/Lik 4_GO
+    100002: Lik 4_GO/Lik 4_GO/     Ten miles away  Taxi driver, Kotor Lorem ipsum
+      dolor sit a
+    100004: Lik 4_GO/Lik 4_GO/BECKY RIDER, 29
+    100006: Lik 4_GO/Lik 4_GO/Fotka
+    100008: Lik 4_GO/Lik 4_GO/Location icon copy
+    100010: Lik 4_GO/Lik 4_GO/Rectangle 3 copy
+    400000: Lik 4_GO/Lik 4_GO/Transform
+    400002: Lik 4_GO/Lik 4_GO/     Ten miles away  Taxi driver, Kotor Lorem ipsum
+      dolor sit a/Transform
+    400004: Lik 4_GO/Lik 4_GO/BECKY RIDER, 29/Transform
+    400006: Lik 4_GO/Lik 4_GO/Fotka/Transform
+    400008: Lik 4_GO/Lik 4_GO/Location icon copy/Transform
+    400010: Lik 4_GO/Lik 4_GO/Rectangle 3 copy/Transform
+    2800000: Lik 4
+    21200000: Lik 4_GO/Lik 4_GO/     Ten miles away  Taxi driver, Kotor Lorem ipsum
+      dolor sit a/SpriteRenderer
+    21200002: Lik 4_GO/Lik 4_GO/BECKY RIDER, 29/SpriteRenderer
+    21200004: Lik 4_GO/Lik 4_GO/Fotka/SpriteRenderer
+    21200006: Lik 4_GO/Lik 4_GO/Location icon copy/SpriteRenderer
+    21200008: Lik 4_GO/Lik 4_GO/Rectangle 3 copy/SpriteRenderer
+    21300000: d9819818d145e47da9afd06f173e5e86
+    21300002: ad021ae7619ff407b80abdc5da3e9f3f
+    21300004: 7d6cdf285eaf347009727259855797f5
+    21300006: d2aa72fe31aad4523b499d3222afe858
+    21300008: dc0e137ad16274a809d247276668b0a5
+    100100000: Lik 4_GO
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: BECKY RIDER, 29
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2499
+      width: 884
+      height: 185
+    spriteID: d9819818d145e47da9afd06f173e5e86
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -274, y: 1440}
+  - name: Location icon copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 896
+      y: 2499
+      width: 69
+      height: 103
+    spriteID: ad021ae7619ff407b80abdc5da3e9f3f
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1842, y: 1089}
+  - name: Rectangle 3 copy
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 2692
+      width: 475
+      height: 6
+    spriteID: 7d6cdf285eaf347009727259855797f5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2734, y: 1369}
+  - name: '     Ten miles away  Taxi driver, Kotor Lorem ipsum dolor sit a'
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 1745
+      width: 1083
+      height: 746
+    spriteID: d2aa72fe31aad4523b499d3222afe858
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2733, y: 1043}
+  - name: Fotka
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 1187
+      height: 1733
+    spriteID: dc0e137ad16274a809d247276668b0a5
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -1415, y: -246}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 1024
+  importedTextureHeight: 2048
+  documentSize: {x: 4000, y: 2250}
+  textureActualWidth: 2048
+  textureActualHeight: 4096
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Lik  2
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 60
+    mosaicPosition: {x: 0, y: 0}
+  - name: BECKY RIDER, 29
+    spriteName: BECKY RIDER, 29
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d9819818d145e47da9afd06f173e5e86
+    layerID: 65
+    mosaicPosition: {x: 4, y: 2499}
+  - name: Location icon copy
+    spriteName: Location icon copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: ad021ae7619ff407b80abdc5da3e9f3f
+    layerID: 64
+    mosaicPosition: {x: 896, y: 2499}
+  - name: Rectangle 3 copy
+    spriteName: Rectangle 3 copy
+    isGroup: 0
+    parentIndex: 0
+    spriteID: 7d6cdf285eaf347009727259855797f5
+    layerID: 63
+    mosaicPosition: {x: 4, y: 2692}
+  - name: '     Ten miles away  Taxi driver, Kotor Lorem ipsum dolor sit a'
+    spriteName: '     Ten miles away  Taxi driver, Kotor Lorem ipsum dolor sit a'
+    isGroup: 0
+    parentIndex: 0
+    spriteID: d2aa72fe31aad4523b499d3222afe858
+    layerID: 62
+    mosaicPosition: {x: 4, y: 1745}
+  - name: Fotka
+    spriteName: Fotka
+    isGroup: 0
+    parentIndex: 0
+    spriteID: dc0e137ad16274a809d247276668b0a5
+    layerID: 54
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+  boneGOs: []
+  generateGOHierarchy: 0
+  textureAssetName: Lik 4
+  prefabAssetName: Lik 4_GO

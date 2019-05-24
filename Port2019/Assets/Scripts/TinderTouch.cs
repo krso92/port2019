@@ -17,6 +17,10 @@ public class TinderTouch : MonoBehaviour
     private DateStats myDateStats;
 
     public TextTyper testTextTyper;
+    public TextTyper NameTextTyper;
+    public TextTyper LocationTextTyper;
+    public TextTyper JobTextTyper;
+
 
 
     public TextMeshProUGUI textInfo;
@@ -59,7 +63,7 @@ public class TinderTouch : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        //NameTextTyper.
         UtilLoadScene.Instance.SetActiveScene("Wolf");
         LeanTouch.OnFingerTap += OnFingerTap;
         LeanTouch.OnGesture += OnSwipe;
@@ -178,6 +182,7 @@ public class TinderTouch : MonoBehaviour
 
     private void MatchWinner()
     {
+        textMatch.GetComponent<Image>().enabled = true;
         textMatch.GetChild(0).GetComponent<Animator>().SetTrigger("Anim");
         //TODO Anim match
         StartCoroutine(LoadNextScene());
@@ -195,11 +200,15 @@ public class TinderTouch : MonoBehaviour
     private void SetNextLook()
     {
         inputEnabled = false;
+        textInfo.text = "";
+        textLocation.text = "";
+        textPlace.text = "";
+        textNameBig.text = "";
         myDateStats = DateManager.Instance.GetByIndex(countChar);
         currChar = DateManager.Instance.GetByIndex(countChar).ProfileImage;
         mainImage.GetComponent<SpriteRenderer>().sprite = currChar;
         textInfo.gameObject.SetActive(false);
-        textInfo.text = DateManager.Instance.GetByIndex(countChar).Description;
+        //textInfo.text = DateManager.Instance.GetByIndex(countChar).Description;
         if (countChar + 1 < DateManager.Instance.DatesCount)
         {
             countChar++;
@@ -219,23 +228,23 @@ public class TinderTouch : MonoBehaviour
     {
         inputEnabled = true;
         textInfo.gameObject.SetActive(true);
-        testTextTyper.TypeText(textInfo.text);
+        StartCoroutine(TurnOnTexts());
+    }
 
+    private IEnumerator TurnOnTexts()
+    {
+        NameTextTyper.TypeText(myDateStats.Name);
+        yield return new WaitForSeconds(1.5f);
+        LocationTextTyper.TypeText(myDateStats.Distance);
+        yield return new WaitForSeconds(1f);
+        JobTextTyper.TypeText(myDateStats.JobTitle);
+        yield return new WaitForSeconds(1f);
+        testTextTyper.TypeText(myDateStats.Description);
     }
 
     private void OnFingerTap(LeanFinger obj)
     {
         startPos = obj.StartScreenPosition;
-    }
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 
     private void LateUpdate()

@@ -38,7 +38,7 @@ public class DateStats
 
     public string JobTitle
     {
-        get => JobTitle;
+        get => jobTitle;
     }
 
     public Sprite ProfileImage
