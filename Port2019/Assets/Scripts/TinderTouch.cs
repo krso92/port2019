@@ -10,6 +10,7 @@ using RedBlueGames.Tools.TextTyper;
 
 public class TinderTouch : MonoBehaviour
 {
+
     private int countChar = 0;
     public List<Sprite> Characters = new List<Sprite>();
     private Sprite currChar;
@@ -55,6 +56,9 @@ public class TinderTouch : MonoBehaviour
     public float speedTween;
     private float tempTime;
 
+    public Image blackImage;
+    private AudioSource audioo;
+
     private void Awake()
     {
         yPivot = mainImage.localPosition.y;
@@ -72,6 +76,9 @@ public class TinderTouch : MonoBehaviour
         XMaxMove = Screen.width / screenDivider;
         ClosePanels();
         SetNextLook();
+        audioo = GetComponent<AudioSource>();
+        blackImage.DOFade(0f, 1.5f);
+        AudioManager.Instance.FadeIn(audioo);
     }
 
     private void OnFingerUp(LeanFinger obj)
@@ -186,6 +193,7 @@ public class TinderTouch : MonoBehaviour
         textMatch.GetChild(0).GetComponent<Animator>().SetTrigger("Anim");
         //TODO Anim match
         StartCoroutine(LoadNextScene());
+
     }
 
     IEnumerator LoadNextScene()
@@ -193,7 +201,14 @@ public class TinderTouch : MonoBehaviour
         yield return new WaitForSeconds(1f);
         MatchWinSound();
         DateManager.Instance.currentDate = myDateStats;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1.5f);
+        AudioManager.Instance.FadeOut(audioo);
+        blackImage.DOFade(1f, 1.5f).OnComplete(() => LoadNewScene());
+
+    }
+
+    private void LoadNewScene()
+    {
         UtilLoadScene.Instance.SelectScene("Cutscene","work1");
     }
 
@@ -236,9 +251,9 @@ public class TinderTouch : MonoBehaviour
         NameTextTyper.TypeText(myDateStats.Name);
         yield return new WaitForSeconds(1f);
         LocationTextTyper.TypeText(myDateStats.Distance);
-        yield return new WaitForSeconds(0.2f);
+        yield return new WaitForSeconds(0.4f);
         JobTextTyper.TypeText(myDateStats.JobTitle);
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(0.45f);
         testTextTyper.TypeText(myDateStats.Description);
     }
 

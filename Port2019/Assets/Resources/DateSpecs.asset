@@ -21,6 +21,7 @@ MonoBehaviour:
     description: I like to be as far away from my home as possible. I work as a stewardess
       and I am saving money to start my dancing career and one day become a famous
       dancer.
+    popupDesc: 
     likes:
     - puzzleDescription: Ocu nesto lagano
       bandPattern: 00000000
@@ -36,6 +37,7 @@ MonoBehaviour:
     description: 40 years of my life I spent traveling and enjoying art living on
       my father's heritage. I enjoy listening to classical music and even more enjoying
       long walks by the sea.
+    popupDesc: I would be so happy if they start playing softly.
     likes:
     - puzzleDescription: Ocu nesto lagano
       bandPattern: 00000000
@@ -50,6 +52,7 @@ MonoBehaviour:
     gameImage: {fileID: 21300016, guid: c6ec1a117500c4dcdb7a6b71dadfc273, type: 3}
     description: I'm into people, that's why I live on the surface but sometimes I
       like to visit my sea-home. Currently, I have 8,7% of fat, pure muscles.
+    popupDesc: Even some modern sounds would be nice.
     likes:
     - puzzleDescription: Ocu nesto lagano
       bandPattern: 00000000
@@ -65,6 +68,7 @@ MonoBehaviour:
     description: I'm totally a cat person (20 cats, 2 of them are pregnant). So I
       work a lot because somebody has to put food on the table. I also draw my cats
       and sell their paintings.
+    popupDesc: Maybe something louder and more energetic?
     likes:
     - puzzleDescription: Ocu nesto lagano
       bandPattern: 00000000
