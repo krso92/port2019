@@ -59,22 +59,6 @@ public class DateStats
         get => description;
     }
 
-    public int GetBandPatternPoints(BandType band)
-    {
-        int a = 0;
-        foreach (var stats in Likes)
-        {
-            a += stats.BandPattern.Count(b => b == band);
-        }
-        /*
-        foreach (var stats in Dislikes)
-        {
-            a += stats.BandPattern.Count(b => b == band);
-        }
-        */
-        return a;
-    }
-
     public List<SatisfactionPattern> Likes
     {
         get => likes;

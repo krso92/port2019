@@ -35,6 +35,8 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         scoreSum = new int[3];
     }
 
+    /*
+     * obsolete
     private void UpdateScore(int[] score)
     {
         for (int i = 0; i < scoreSum.Length; i++)
@@ -42,6 +44,7 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
             scoreSum[i] += score[i];
         }
     }
+    */
 
     private void Start()
     {
@@ -82,40 +85,26 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
     private IEnumerator CheckDateMood()
     {
         yield return null;
+        var date = DateManager.Instance.currentDate;
         for (int i = 0; i < REQUEST_COUNT; i++)
         {
+            // TODO -- UI of your date -- show text (tell stuff)
             float then = Time.time;
             while (then + TIME_FOR_OPERA > Time.time)
             {
                 yield return new WaitForSeconds(1f);
-                
-                int[] scoreNow = CheckSatisfactionLevel();
-                
-                Debug.Log("/////////////Satisfaction/////////////");
-                Debug.Log(scoreNow[0]);
-                Debug.Log(scoreNow[1]);
-                Debug.Log("//////////////////////////////////////");
-
-                UpdateScore(scoreNow);
-                // TODO -- update date mood on UI, determine MAX and place it on range scroll
-                // TODO -- check pattern if correct then break
+                if (GetBandPoints(date, bandMembers, i) == 5)
+                {
+                    break;
+                }
             }
-            // TODO -- show something
+            int scoreNow = GetBandPoints(date, bandMembers, i);
             Debug.Log("Ciklus done, score is [" + scoreSum[0] + ", " + scoreSum[1] + "]");
         }
         // TODO -- game is done
-    }
-
-    private int[] CheckSatisfactionLevel()
-    {
-        Debug.Log("Check satisfaction level");
-        var dateStats = DateManager.Instance.GetRandomDateStats;
-        int[] res = new int[3];
-        //res[0] = GetCreaturePoints(dateStats);
-        res[1] = GetBandPoints(dateStats);
-        // not actually used now
-        res[2] = 0;
-        return res;
+        // activate free mode
+        Debug.Log("All done!");
+        GameManager.Instance.freeMode = true;
     }
 
     /*
@@ -139,13 +128,26 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         return sum;
     }
     */
-    private int GetBandPoints(DateStats stats)
+    private int GetBandPoints(DateStats stats, List<BandType> playingPeople, int period)
     {
-        int sum = 0;
-        foreach(BandType band in bandMembers)
+        // suva fora ovde
+
+        // prvi samo jbg
+        var demand = stats.Likes[period].BandPattern[0];
+
+        if (playingPeople.Count > 0)
         {
-            sum += stats.GetBandPatternPoints(band);
+
+            var val = playingPeople.First();
+            return playingPeople.All(x => x == val && x == demand)
+                ?
+                playingPeople.Count
+                :
+                playingPeople.Count(x => x == demand);
         }
-        return sum;
+        else
+        {
+            return 0;
+        }
     }
 }

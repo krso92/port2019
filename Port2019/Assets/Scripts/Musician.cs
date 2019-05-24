@@ -71,7 +71,11 @@ public class Musician : MonoBehaviour
 
     protected void OnMouseUpAsButton()
     {
-        if (GameManager.Instance.freeMode || AudioManager.Instance.CurrentlyPlayingCount < 5)
+        if (
+            (GameManager.Instance.freeMode || AudioManager.Instance.CurrentlyPlayingCount < 5)
+            ||
+            IsPlaying
+        )
         {
             isPlaying = !isPlaying;
 
