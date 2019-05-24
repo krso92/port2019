@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Musician : MonoBehaviour
 {
@@ -22,10 +23,12 @@ public class Musician : MonoBehaviour
     {
         get => audioSource.time;
     }
+    public AudioSource AudioSource { get => audioSource; private set => audioSource = value; }
 
     public static Musician GetPlayingMusician()
     {
-        Musician[] musicians = GameObject.Find("Musicians").GetComponentsInChildren<Musician>();
+        Musician[] musicians = FindObjectsOfType<Musician>();
+        
         foreach (var m in musicians)
         {
             if (m.IsPlaying)
@@ -34,6 +37,20 @@ public class Musician : MonoBehaviour
             }
         }
         return null;
+    }
+
+    public static List<Musician> GetPlayingMusicians()
+    {
+        Musician[] musicians = FindObjectsOfType<Musician>();
+        List<Musician> output = new List<Musician>();
+        foreach(var m in musicians)
+        {
+            if (m.IsPlaying)
+            {
+                output.Add(m);
+            }
+        }
+        return output;
     }
 
     // For more dynamic animations maybe??

@@ -37,8 +37,7 @@ public class UIManager : MonoBehaviour
     {
         blackImage.raycastTarget = true;
         blackImage.DOFade(1f, 1.5f).OnComplete(() => LoadNewScene());
-
-
+        AudioManager.Instance.FadeOutMusicians();
     }
 
     private void LoadNewScene()

@@ -76,6 +76,16 @@ public class AudioManager : TGlobalSingleton<AudioManager>
 
     }
 
+    public void FadeOutMusicians()
+    {
+        var mus = Musician.GetPlayingMusicians();
+        Debug.Log(mus.Count);
+        foreach(var m in mus)
+        {
+            m.StopMusic();
+        }
+    }
+
     public void FadeIn(AudioSource source,float duration = 1f)
     {
         source.volume = 0f;
