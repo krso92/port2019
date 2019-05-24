@@ -25,12 +25,6 @@ MonoBehaviour:
     - puzzleDescription: I would be so happy if they start playing softly.
       bandPattern: 00000000
       creaturePattern: 
-    - puzzleDescription: Maybe something louder and more energetic?
-      bandPattern: 01000000
-      creaturePattern: 
-    - puzzleDescription: Even some modern sounds would be nice.
-      bandPattern: 02000000
-      creaturePattern: 
   - name: Sir James, 49
     distance: Less than mile away
     jobTitle: Art Investor, Budva
@@ -43,12 +37,6 @@ MonoBehaviour:
     - puzzleDescription: Even some modern sounds would be nice.
       bandPattern: 02000000
       creaturePattern: 
-    - puzzleDescription: Maybe something louder and more energetic?
-      bandPattern: 01000000
-      creaturePattern: 
-    - puzzleDescription: I would be so happy if they start playing softly.
-      bandPattern: 00000000
-      creaturePattern: 
   - name: Bobby, 24
     distance: Five miles away
     jobTitle: Bodybuilder, Podgorica
@@ -60,12 +48,6 @@ MonoBehaviour:
     - puzzleDescription: Even some modern sounds would be nice.
       bandPattern: 02000000
       creaturePattern: 
-    - puzzleDescription: I would be so happy if they start playing softly.
-      bandPattern: 00000000
-      creaturePattern: 
-    - puzzleDescription: Maybe something louder and more energetic?
-      bandPattern: 01000000
-      creaturePattern: 
   - name: Becky Raider, 29
     distance: Ten miles away
     jobTitle: Taxi driver, Kotor
@@ -75,12 +57,6 @@ MonoBehaviour:
       work a lot because somebody has to put food on the table. I also draw my cats
       and sell their paintings.
     likes:
-    - puzzleDescription: I would be so happy if they start playing softly.
-      bandPattern: 00000000
-      creaturePattern: 
-    - puzzleDescription: Even some modern sounds would be nice.
-      bandPattern: 02000000
-      creaturePattern: 
-    - puzzleDescription: Maybe something louder and more energetic?
+    - puzzleDescription: I suggest something louder and energetic!
       bandPattern: 01000000
       creaturePattern: 
