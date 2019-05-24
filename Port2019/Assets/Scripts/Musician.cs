@@ -89,7 +89,7 @@ public class Musician : MonoBehaviour
     protected void OnMouseUpAsButton()
     {
         if (
-            (GameManager.Instance.freeMode || AudioManager.Instance.CurrentlyPlayingCount < 5)
+            (GameManager.Instance.freeMode || AudioManager.Instance.CurrentlyPlayingCount < OperaStateManager.MAX_SELECTED)
             ||
             IsPlaying
         )
@@ -111,7 +111,7 @@ public class Musician : MonoBehaviour
         }
         else
         {
-            Debug.Log("Can not play music, not in free mode and 5 players already playing");
+            Debug.Log("Can not play music, not in free mode and 7 players already playing");
         }
     }
     

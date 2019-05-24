@@ -12,8 +12,11 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
         2 - ?? Count points ??
     */
 
-    public const float TIME_FOR_OPERA = 60 * 2;
+    public const float TIME_FOR_OPERA = 30;
     public const int REQUEST_COUNT = 3;
+
+    public const int MAX_SELECTED = 7;
+    public const int PLAYERS_IN_BAND = 5;
 
     private int requestIndex = 0;
 
@@ -92,14 +95,17 @@ public class OperaStateManager : TGlobalSingleton<OperaStateManager>
             float then = Time.time;
             while (then + TIME_FOR_OPERA > Time.time)
             {
+                // TODO -- counter text
+                Debug.Log("Remaining time"  + (then - Time.time));
+
                 yield return new WaitForSeconds(1f);
-                if (GetBandPoints(date, bandMembers, i) == 5)
+                if (GetBandPoints(date, bandMembers, i) == PLAYERS_IN_BAND)
                 {
                     break;
                 }
             }
             int scoreNow = GetBandPoints(date, bandMembers, i);
-            Debug.Log("Ciklus done, score is [" + scoreSum[0] + ", " + scoreSum[1] + "]");
+            Debug.Log("Ciklus done, score is [" + scoreNow + "]");
         }
         // TODO -- game is done
         // activate free mode
