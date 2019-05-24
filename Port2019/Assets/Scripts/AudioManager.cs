@@ -14,6 +14,11 @@ public class AudioManager : TGlobalSingleton<AudioManager>
     private Musician initialMusician;
     private int count;
 
+    public int CurrentlyPlayingCount
+    {
+        get => count;
+    }
+
     public AudioMixer masterMixer;
 
 

@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameManager : TGlobalSingleton<GameManager>
 {
+    public bool freeMode;
+
     public delegate void MusicianStartPlaying(Musician musician);
     public delegate void MusicianStopPlaying(Musician musician);
 
