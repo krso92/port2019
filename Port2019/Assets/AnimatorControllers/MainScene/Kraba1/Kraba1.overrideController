@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Kraba1
+  m_Controller: {fileID: 9100000, guid: e672e8ed85d69614c94145dfeaedf287, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dc749ba56385609449a0a484e91c4220, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 70441726800b2431698a0839322264ee, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f58320b71312b46b485d9b4580385b0e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 9a55843bddb36422db11740ef076b3c6, type: 2}

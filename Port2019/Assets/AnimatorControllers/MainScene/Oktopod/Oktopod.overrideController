@@ -1,0 +1,15 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Oktopod
+  m_Controller: {fileID: 9100000, guid: e672e8ed85d69614c94145dfeaedf287, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: dc749ba56385609449a0a484e91c4220, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: befe9c829177a42d18cb25afe6d5e6c7, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: f58320b71312b46b485d9b4580385b0e, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: e99b73e77417c4de19c3d8cd31fbee1f, type: 2}
