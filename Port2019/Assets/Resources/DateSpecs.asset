@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: DateSpecs
   m_EditorClassIdentifier: 
   allStats:
-  - name: Alisa Fisher
-    distance: Closer then you think
-    jobTitle: 
+  - name: Alisa Fisher, 24
+    distance: Two miles away
+    jobTitle: Stewerdess, Tivat
     profileImage: {fileID: 21300008, guid: 95104b5f4c66145238c240f53ed77830, type: 3}
-    description: Fish and a half
+    description: Fish and a half and quater by quater by quater by quater by quater
+      by quater by quater by and eight.
     likes:
       bandPattern: 00000000
       creaturePattern: 00000000

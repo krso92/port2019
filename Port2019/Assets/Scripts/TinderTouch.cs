@@ -200,11 +200,15 @@ public class TinderTouch : MonoBehaviour
     private void SetNextLook()
     {
         inputEnabled = false;
+        textInfo.text = "";
+        textLocation.text = "";
+        textPlace.text = "";
+        textNameBig.text = "";
         myDateStats = DateManager.Instance.GetByIndex(countChar);
         currChar = DateManager.Instance.GetByIndex(countChar).ProfileImage;
         mainImage.GetComponent<SpriteRenderer>().sprite = currChar;
         textInfo.gameObject.SetActive(false);
-        textInfo.text = DateManager.Instance.GetByIndex(countChar).Description;
+        //textInfo.text = DateManager.Instance.GetByIndex(countChar).Description;
         if (countChar + 1 < DateManager.Instance.DatesCount)
         {
             countChar++;
@@ -229,28 +233,18 @@ public class TinderTouch : MonoBehaviour
 
     private IEnumerator TurnOnTexts()
     {
-        NameTextTyper.TypeText(textNameBig.text);
+        NameTextTyper.TypeText(myDateStats.Name);
         yield return new WaitForSeconds(1.5f);
-        LocationTextTyper.TypeText(textNameBig.text);
+        LocationTextTyper.TypeText(myDateStats.Distance);
         yield return new WaitForSeconds(1f);
-        JobTextTyper.TypeText(textNameBig.text);
+        JobTextTyper.TypeText(myDateStats.JobTitle);
         yield return new WaitForSeconds(1f);
-        testTextTyper.TypeText(textInfo.text);
+        testTextTyper.TypeText(myDateStats.Description);
     }
 
     private void OnFingerTap(LeanFinger obj)
     {
         startPos = obj.StartScreenPosition;
-    }
-
-
-
-
-
-    // Update is called once per frame
-    void Update()
-    {
-       
     }
 
     private void LateUpdate()
